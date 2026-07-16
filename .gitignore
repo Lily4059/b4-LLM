@@ -1,0 +1,11 @@
+__pycache__/
+*.py[cod]
+outputs/
+module_demos/outputs/
+memory/
+*.log
+*.tmp
+outputs/_test_*/
+outputs/tmp*/
+models/*
+!models/.gitkeep
