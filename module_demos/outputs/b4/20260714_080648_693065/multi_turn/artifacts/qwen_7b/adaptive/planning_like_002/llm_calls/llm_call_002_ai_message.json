@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "请提供与 Memory 相关的关键词，以便我进行搜索。",
+  "tool_calls": []
+}

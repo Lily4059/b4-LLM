@@ -1,0 +1,9 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_fast_plan_search_001",
+    "name": "local_file_search",
+    "content": "{\"skill_name\":\"local_file_search\",\"status\":\"success\",\"input\":{\"query\":\"使用 local_file_search 在 docs 目录中搜索与 Memory 相关的内容\",\"root_dir\":\"docs\",\"top_k\":8},\"output\":{\"query\":\"使用 local_file_search 在 docs 目录中搜索与 Memory 相关的内容\",\"root_dir\":\"docs\",\"files_scanned\":3,\"total_matches\":3,\"truncated_files\":0,\"skipped_files\":0,\"results\":[{\"path\":\"docs/search_skill_demo.md\",\"score\":11.773,\"snippet\":\"# Search Skill Demo 检索演示文档用于验证 local_file_search 工具。 当用户询问“检索演示 工具编排”时，搜索工具应能命中这个文件。 工具编排强调模型先决定调用哪个工具，再由运行时执行工具并把 ToolMessage 返回给模型。\",\"line_number\":3,\"match_count\":3,\"match_type\":\"token\"},{\"path\":\"docs/agent_intro.txt\",\"score\":8.386,\"snippet\":\"Agent 系统通常由模型、工具、记忆和执行循环组成。 工具调用让模型能够读取本地文件、执行计算，并把结果用于后续回答。 Memory 为 Agent 提供全局知识和历史对话上下文。\",\"line_number\":3,\"match_count\":2,\"match_type\":\"token\"},{\"path\":\"docs/tool_calling.md\",\"score\":5.0,\"snippet\":\"docs/tool_calling.md\",\"line_number\":null,\"match_count\":1,\"match_type\":\"token\"}]},\"error\":null,\"latency_ms\":0.909}",
+    "status": "success"
+  }
+]

@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"第一条规则：模型负责决定是否调用工具。第二条规则：工具层负责校验和执行。\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "第一条规则：模型负责决定是否调用工具。第二条规则：工具层负责校验和执行。",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"第一条规则：模型负责决定是否调用工具。第二条规则：工具层负责校验和执行。\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 4096,
+        "output_tokens": 32,
+        "elapsed_seconds": 9.1923
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T06:53:47+08:00",
+  "usage": {
+    "input_tokens": 4096,
+    "output_tokens": 32,
+    "elapsed_seconds": 9.1923
+  }
+}

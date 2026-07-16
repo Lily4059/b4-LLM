@@ -1,0 +1,21 @@
+{
+  "f524f6d1384dfdde9c8e88080320e99529cb145f3312649d4ddea0906c2bc922": {
+    "name": "calculator",
+    "args": {
+      "expression": "92"
+    },
+    "created_at": "2026-07-14T08:04:02+08:00",
+    "skill_result": {
+      "skill_name": "calculator",
+      "status": "success",
+      "input": {
+        "expression": "92"
+      },
+      "output": {
+        "result": 92
+      },
+      "error": null,
+      "latency_ms": 0.266
+    }
+  }
+}

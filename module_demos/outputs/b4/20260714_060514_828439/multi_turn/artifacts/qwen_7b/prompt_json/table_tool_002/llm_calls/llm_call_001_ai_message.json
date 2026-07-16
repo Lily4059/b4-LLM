@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"plan\":[\"调用table_analyzer分析results.csv文件\"]}",
+  "tool_calls": []
+}

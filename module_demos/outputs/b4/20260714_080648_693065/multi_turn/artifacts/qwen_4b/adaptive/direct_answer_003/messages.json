@@ -1,0 +1,66 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. Use available tools when needed."
+  },
+  {
+    "role": "user",
+    "content": "请用三条要点解释什么是 evidence（证据）约束，在 Agent 系统中有什么用。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {
+          "query": "evidence 约束 证据约束",
+          "file_types": [
+            "md",
+            "txt"
+          ],
+          "top_k": 10
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "local_file_search",
+    "content": "{\"skill_name\": \"local_file_search\", \"status\": \"success\", \"input\": {\"query\": \"evidence 约束 证据约束\", \"file_types\": [\"md\", \"txt\"], \"top_k\": 10}, \"output\": {\"query\": \"evidence 约束 证据约束\", \"root_dir\": \".\", \"files_scanned\": 11, \"total_matches\": 0, \"truncated_files\": 0, \"skipped_files\": 0, \"results\": [], \"compressed\": false, \"original_result_count\": 0}, \"error\": null, \"latency_ms\": 3.925}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "已获得本轮工具结果。请基于最新证据继续决策：如果信息已足够，就直接输出最终回答；如果仍缺关键证据，也可以继续请求下一轮工具；但优先利用现有证据收敛，不要重复已经成功返回的相同调用。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {
+          "query": "evidence constraint 证据约束",
+          "file_types": [
+            "md",
+            "txt"
+          ],
+          "top_k": 10
+        }
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "本次运行的工具预算已用尽，后续不会再执行新的工具调用。\n请仅基于当前对话和已有工具证据继续收敛：\n- 如果信息已经足够，直接给出最终回答；\n- 如果仍存在关键歧义或需要用户决定，请直接提出问题；\n- 如果只能给出有边界的结论，也请明确说明边界。\n不要重复已经成功返回的相同工具调用。"
+  },
+  {
+    "role": "assistant",
+    "content": "基于通用 Agent 系统知识，以下是关于 **Evidence（证据）约束** 的三条要点解释：\n\n1.  **定义：基于事实的推理边界**\n    Evidence 约束是指 Agent 在生成回答或执行决策时，必须严格依据提供的上下文、文档或外部数据中的**明确事实**进行推理。它要求 Agent 不能依赖幻觉、先验知识或主观臆断，而必须“有迹可循”，即每一个结论都应有对应的证据片段作为支撑。\n\n2.  **作用：提升回答的可信度与准确性**\n    在 Agent 系统中，引入证据约束能有效抑制“幻觉”（Hallucination）现象。当用户询问问题时，Agent 能够明确指出其回答是基于哪一段原文、哪个数据表或哪条规则推导出来的。这不仅让回答更具可信度，也便于用户验证和溯源，特别是在处理法律、医疗、金融等高风险领域时至关重要。\n\n3.  **机制：从“自由生成”到“检索增强”的范式转变**\n    证据约束推动了 Agent 从传统的“自由文本生成”向“检索增强生成（RAG）”或“基于证据的推理”模式转变。在这种模式下，Agent 的工作流程变为：先检索相关证据 -> 分析证据内容 -> 基于证据生成答案。这种机制确保了 Agent 的知识来源是可控、透明且可验证的，从而大幅降低了因模型内部知识过时或错误而导致的风险。",
+    "tool_calls": []
+  }
+]

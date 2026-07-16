@@ -1,0 +1,17 @@
+{
+  "generated_at": "2026-07-14T07:33:51+08:00",
+  "total_tool_calls": 1,
+  "total_errors": 0,
+  "failure_rate": 0.0,
+  "by_tool": {
+    "local_file_search": {
+      "tool_calls": 1,
+      "success": 1,
+      "error": 0,
+      "cache_hits": 0,
+      "retries": 0,
+      "failure_rate": 0.0,
+      "avg_latency_ms": 1.145
+    }
+  }
+}

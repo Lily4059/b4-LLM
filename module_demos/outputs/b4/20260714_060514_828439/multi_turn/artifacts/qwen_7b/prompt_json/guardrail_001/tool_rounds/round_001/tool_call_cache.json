@@ -1,0 +1,44 @@
+{
+  "4305261430d8b5cd141ea70d584db115ce871a19f62081a13fbcee4cf511fa0a": {
+    "name": "local_file_search",
+    "args": {
+      "query": "agent_intro.txt",
+      "root_dir": "docs",
+      "file_types": [
+        "txt"
+      ]
+    },
+    "created_at": "2026-07-14T06:55:47+08:00",
+    "skill_result": {
+      "skill_name": "local_file_search",
+      "status": "success",
+      "input": {
+        "query": "agent_intro.txt",
+        "root_dir": "docs",
+        "file_types": [
+          "txt"
+        ]
+      },
+      "output": {
+        "query": "agent_intro.txt",
+        "root_dir": "docs",
+        "files_scanned": 1,
+        "total_matches": 1,
+        "truncated_files": 0,
+        "skipped_files": 0,
+        "results": [
+          {
+            "path": "docs/agent_intro.txt",
+            "score": 16.0,
+            "snippet": "docs/agent_intro.txt",
+            "line_number": null,
+            "match_count": 3,
+            "match_type": "path"
+          }
+        ]
+      },
+      "error": null,
+      "latency_ms": 0.718
+    }
+  }
+}

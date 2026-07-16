@@ -1,0 +1,17 @@
+{
+  "status": "needs_user",
+  "tool_rounds_used": 0,
+  "llm_call_count": 0,
+  "plan_state": {
+    "steps": []
+  },
+  "turns": [],
+  "error": {
+    "type": "HumanInTheLoop",
+    "message": "user request contains duplicate local resources",
+    "question": "ASK_USER: 你的请求里出现了同一资源的重复读取，存在语义歧义。\n重复项：docs/tool_calling.md\n- 选项 A：严格按原指令重复处理这些资源；\n- 选项 B：识别为重复项，只处理一次/去重后继续，并在答案里说明；\n- 选项 C：你其实想写成别的资源路径，请直接告诉我。",
+    "plan_state": {
+      "steps": []
+    }
+  }
+}

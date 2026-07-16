@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.9,
+  "reason": "文档内容简单，直接提取规则即可完成任务",
+  "llm_status": "success",
+  "llm_error": null
+}

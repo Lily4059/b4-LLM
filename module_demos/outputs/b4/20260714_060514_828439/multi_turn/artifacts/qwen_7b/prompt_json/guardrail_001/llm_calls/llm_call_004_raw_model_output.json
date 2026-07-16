@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"存在\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "存在",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"存在\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 2671,
+        "output_tokens": 10,
+        "elapsed_seconds": 3.75
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T06:55:47+08:00",
+  "usage": {
+    "input_tokens": 2671,
+    "output_tokens": 10,
+    "elapsed_seconds": 3.75
+  }
+}

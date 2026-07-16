@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "请确认max_chars的值为正整数，然后重试。",
+  "tool_calls": []
+}

@@ -1,0 +1,22 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "file_reader_1",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/agent_intro.txt",
+        "max_chars": 1200
+      }
+    },
+    {
+      "id": "file_reader_2",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/search_skill_demo.md",
+        "max_chars": 1200
+      }
+    }
+  ]
+}

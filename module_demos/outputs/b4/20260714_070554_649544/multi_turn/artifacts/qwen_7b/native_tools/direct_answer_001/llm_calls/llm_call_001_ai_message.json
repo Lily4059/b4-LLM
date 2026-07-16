@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"plan\":[\"解释什么是tool calling\"]}",
+  "tool_calls": []
+}

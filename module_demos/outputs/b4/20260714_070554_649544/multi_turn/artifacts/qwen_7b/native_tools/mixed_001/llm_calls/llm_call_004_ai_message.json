@@ -1,0 +1,14 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "STEP_DONE",
+      "args": {
+        "step": 1,
+        "summary": "文件 docs/agent_intro.txt 的内容字符数为 92。"
+      }
+    }
+  ]
+}

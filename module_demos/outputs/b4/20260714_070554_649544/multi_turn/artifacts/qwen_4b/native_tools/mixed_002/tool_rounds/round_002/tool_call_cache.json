@@ -1,0 +1,21 @@
+{
+  "0d31a44543e844624c62b5b5d026cb586e0947f8e0dff611a78ebcbfd54fc55d": {
+    "name": "calculator",
+    "args": {
+      "expression": "1 + 1"
+    },
+    "created_at": "2026-07-14T07:41:54+08:00",
+    "skill_result": {
+      "skill_name": "calculator",
+      "status": "success",
+      "input": {
+        "expression": "1 + 1"
+      },
+      "output": {
+        "result": 2
+      },
+      "error": null,
+      "latency_ms": 0.25
+    }
+  }
+}

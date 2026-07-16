@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"path\":\"tables/results.csv\",\"max_rows_preview\":5,\"describe\":true}",
+  "tool_calls": []
+}

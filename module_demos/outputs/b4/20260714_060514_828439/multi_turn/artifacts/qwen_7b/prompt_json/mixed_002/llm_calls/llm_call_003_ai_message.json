@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_FAIL:1:max_chars must be a positive integer, please provide a valid max_chars value.",
+  "tool_calls": []
+}

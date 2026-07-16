@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"low\",\"confidence\":1.0,\"reason\":\"单轮调用table_analyzer工具即可完成列结构分析和描述，且无需额外信息。\"}",
+  "tool_calls": []
+}

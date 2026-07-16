@@ -1,0 +1,69 @@
+{
+  "status": "success",
+  "tool_rounds_used": 0,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "status": "completed",
+        "summary": "Fast Path：单步任务且不需要外部工具证据，直接完成。",
+        "error": ""
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "tool_calls": []
+      },
+      "llm_status": "error",
+      "llm_error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: name"
+      },
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "finish",
+      "ai_message": {
+        "role": "assistant",
+        "content": "ReAct 模式在执行完一步后会回顾上一步的效果并据此调整策略，而 Plan-and-Execute 模式则会在执行计划时尽量减少回顾和调整。",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+            "status": "completed",
+            "summary": "Fast Path：单步任务且不需要外部工具证据，直接完成。",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": null,
+  "adaptive": {
+    "strategy": "plan_execute",
+    "complexity": "high",
+    "confidence": 0.55,
+    "reason": "启发式未能确认其为单步任务，保守回退到 plan_execute。",
+    "llm_status": "success",
+    "llm_error": null
+  }
+}

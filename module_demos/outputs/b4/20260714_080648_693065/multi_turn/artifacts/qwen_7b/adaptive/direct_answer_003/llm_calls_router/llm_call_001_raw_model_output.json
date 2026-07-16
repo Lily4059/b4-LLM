@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"{\\\"complexity\\\":\\\"low\\\",\\\"confidence\\\":0.95,\\\"reason\\\":\\\"通常0~1轮工具即可完成，不需要显式多步计划与状态推进。\\\"}\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "{\"complexity\":\"low\",\"confidence\":0.95,\"reason\":\"通常0~1轮工具即可完成，不需要显式多步计划与状态推进。\"}",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"{\\\"complexity\\\":\\\"low\\\",\\\"confidence\\\":0.95,\\\"reason\\\":\\\"通常0~1轮工具即可完成，不需要显式多步计划与状态推进。\\\"}\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 670,
+        "output_tokens": 45,
+        "elapsed_seconds": 10.0064
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T08:21:13+08:00",
+  "usage": {
+    "input_tokens": 670,
+    "output_tokens": 45,
+    "elapsed_seconds": 10.0064
+  }
+}

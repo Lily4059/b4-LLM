@@ -1,0 +1,44 @@
+{
+  "7e90760892b79ade463860dc50ca95eddbef914d2e0398bb01b11e020bd1afd2": {
+    "name": "local_file_search",
+    "args": {
+      "query": "THIS_FILE_SHOULD_NOT_EXIST_12345.txt",
+      "root_dir": "docs",
+      "file_types": [
+        "txt"
+      ]
+    },
+    "created_at": "2026-07-14T06:57:18+08:00",
+    "skill_result": {
+      "skill_name": "local_file_search",
+      "status": "success",
+      "input": {
+        "query": "THIS_FILE_SHOULD_NOT_EXIST_12345.txt",
+        "root_dir": "docs",
+        "file_types": [
+          "txt"
+        ]
+      },
+      "output": {
+        "query": "THIS_FILE_SHOULD_NOT_EXIST_12345.txt",
+        "root_dir": "docs",
+        "files_scanned": 1,
+        "total_matches": 1,
+        "truncated_files": 0,
+        "skipped_files": 0,
+        "results": [
+          {
+            "path": "docs/agent_intro.txt",
+            "score": 5.0,
+            "snippet": "docs/agent_intro.txt",
+            "line_number": null,
+            "match_count": 1,
+            "match_type": "token"
+          }
+        ]
+      },
+      "error": null,
+      "latency_ms": 0.705
+    }
+  }
+}

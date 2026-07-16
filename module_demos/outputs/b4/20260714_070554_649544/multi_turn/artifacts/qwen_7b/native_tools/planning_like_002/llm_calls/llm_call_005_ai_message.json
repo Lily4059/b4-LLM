@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:1:Memory 为 Agent 提供全局知识和历史对话上下文。相关文件包括：docs/agent_intro.txt、docs/search_skill_demo.md 和 docs/tool_calling.md。",
+  "tool_calls": []
+}

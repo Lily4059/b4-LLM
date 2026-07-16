@@ -1,0 +1,8 @@
+{
+  "strategy": "plan_execute",
+  "complexity": "high",
+  "confidence": 0.0,
+  "reason": "文件不存在，无法通过单轮工具调用获取内容。",
+  "llm_status": "success",
+  "llm_error": null
+}

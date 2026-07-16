@@ -1,0 +1,27 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_003",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    }
+  ]
+}

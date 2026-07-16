@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:2:已完成列含义说明。表格包含三列：task（任务类型，如read_file、calculate、search）、score（任务得分，范围88-98，均值约92.7）、latency（任务延迟，单位秒，范围3.1-20.5，均值约12.9）。",
+  "tool_calls": []
+}

@@ -1,0 +1,27 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "calculator",
+      "args": {
+        "expression": "1 + 1"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "calculator",
+      "args": {
+        "expression": "1 + 1"
+      }
+    },
+    {
+      "id": "call_003",
+      "name": "calculator",
+      "args": {
+        "expression": "1 + 1"
+      }
+    }
+  ]
+}

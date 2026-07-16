@@ -1,0 +1,22 @@
+{
+  "prompt_json": {
+    "status": "success",
+    "tool_call_count": 2,
+    "tool_name_correct": true,
+    "args_complete": true,
+    "structured_output_success": true,
+    "input_tokens": 1617,
+    "output_tokens": 71,
+    "elapsed_seconds": 4.7718
+  },
+  "native_tools": {
+    "status": "success",
+    "tool_call_count": 2,
+    "tool_name_correct": true,
+    "args_complete": true,
+    "structured_output_success": true,
+    "input_tokens": 1514,
+    "output_tokens": 58,
+    "elapsed_seconds": 4.1573
+  }
+}

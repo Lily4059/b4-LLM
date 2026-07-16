@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"tool calling是指在对话过程中调用外部工具来获取信息或执行任务以帮助解决问题的过程。\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "tool calling是指在对话过程中调用外部工具来获取信息或执行任务以帮助解决问题的过程。",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"tool calling是指在对话过程中调用外部工具来获取信息或执行任务以帮助解决问题的过程。\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 659,
+        "output_tokens": 30,
+        "elapsed_seconds": 6.876
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T08:19:53+08:00",
+  "usage": {
+    "input_tokens": 659,
+    "output_tokens": 30,
+    "elapsed_seconds": 6.876
+  }
+}

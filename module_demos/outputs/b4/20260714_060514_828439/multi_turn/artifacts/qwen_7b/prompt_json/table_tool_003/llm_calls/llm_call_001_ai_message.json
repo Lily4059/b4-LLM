@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"plan\":[\"table_analyzer\", \"ASK_USER\"]}",
+  "tool_calls": []
+}

@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"high\",\"confidence\":0.0,\"reason\":\"文件不存在，无法通过单轮工具调用获取内容。\"}",
+  "tool_calls": []
+}

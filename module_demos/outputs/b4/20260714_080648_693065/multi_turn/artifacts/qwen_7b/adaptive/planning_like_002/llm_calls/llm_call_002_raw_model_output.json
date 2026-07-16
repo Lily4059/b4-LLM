@@ -1,0 +1,32 @@
+{
+  "mode": "native_tools",
+  "effective_mode": "native_tools",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "请提供与 Memory 相关的关键词，以便我进行搜索。",
+  "parsed_candidate": {
+    "content": "请提供与 Memory 相关的关键词，以便我进行搜索。",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "请提供与 Memory 相关的关键词，以便我进行搜索。",
+      "usage": {
+        "input_tokens": 1510,
+        "output_tokens": 16,
+        "elapsed_seconds": 4.9096
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T08:34:46+08:00",
+  "usage": {
+    "input_tokens": 1510,
+    "output_tokens": 16,
+    "elapsed_seconds": 4.9096
+  }
+}

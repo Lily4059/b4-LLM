@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"plan\":[\"(1024/8+37)*19-5\"]}",
+  "tool_calls": []
+}

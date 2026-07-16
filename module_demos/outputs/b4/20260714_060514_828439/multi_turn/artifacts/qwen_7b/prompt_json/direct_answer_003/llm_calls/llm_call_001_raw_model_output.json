@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"{\\\"plan\\\":[\\\"定义证据约束的概念\\\",\\\"解释证据约束在Agent系统中的作用\\\",\\\"总结三点关键信息\\\"]}\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "{\"plan\":[\"定义证据约束的概念\",\"解释证据约束在Agent系统中的作用\",\"总结三点关键信息\"]}",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"{\\\"plan\\\":[\\\"定义证据约束的概念\\\",\\\"解释证据约束在Agent系统中的作用\\\",\\\"总结三点关键信息\\\"]}\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 1581,
+        "output_tokens": 34,
+        "elapsed_seconds": 8.8263
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T06:23:54+08:00",
+  "usage": {
+    "input_tokens": 1581,
+    "output_tokens": 34,
+    "elapsed_seconds": 8.8263
+  }
+}

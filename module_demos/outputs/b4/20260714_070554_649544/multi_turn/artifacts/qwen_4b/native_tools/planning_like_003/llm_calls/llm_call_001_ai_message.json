@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"plan\":[\"使用local_file_search搜索docs目录中与Agent系统组成相关的文件\"]}",
+  "tool_calls": []
+}

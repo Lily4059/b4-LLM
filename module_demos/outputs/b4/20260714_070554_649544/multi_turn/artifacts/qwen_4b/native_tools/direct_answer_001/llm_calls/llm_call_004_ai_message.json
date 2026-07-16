@@ -1,0 +1,18 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "local_file_search",
+      "args": {
+        "query": "tool calling",
+        "file_types": [
+          "txt",
+          "md"
+        ],
+        "top_k": 5
+      }
+    }
+  ]
+}

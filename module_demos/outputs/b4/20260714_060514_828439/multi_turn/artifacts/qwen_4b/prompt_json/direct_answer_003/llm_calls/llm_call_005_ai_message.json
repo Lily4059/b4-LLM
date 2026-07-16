@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:4:支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。",
+  "tool_calls": []
+}

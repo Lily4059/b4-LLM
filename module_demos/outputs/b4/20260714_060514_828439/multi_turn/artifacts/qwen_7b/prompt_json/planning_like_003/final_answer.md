@@ -1,0 +1,7 @@
+- 共同关注点：
+  - 两个文件都提到了Agent系统的关键组成部分。
+- 关键差异点：
+  - `agent_intro.txt` 描述了Agent系统的组成，包括模型、工具、记忆和执行循环。
+  - `search_skill_demo.md` 是一个用于验证`local_file_search`工具的文档，描述了工具编排的概念。
+- 结论与建议：
+  - `agent_intro.txt` 更适合了解Agent系统的整体架构，而`search_skill_demo.md`则侧重于工具搜索功能的具体实现细节。

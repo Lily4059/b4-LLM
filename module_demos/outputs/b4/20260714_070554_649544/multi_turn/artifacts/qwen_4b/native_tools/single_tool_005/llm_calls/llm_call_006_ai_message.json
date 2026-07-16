@@ -1,0 +1,188 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_003",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_004",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_005",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_006",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_007",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_008",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_009",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_010",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_011",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_012",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_013",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_014",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_015",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_016",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_017",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_018",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_019",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_020",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_021",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_022",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_023",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_024",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_025",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    },
+    {
+      "id": "call_026",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+      }
+    }
+  ]
+}

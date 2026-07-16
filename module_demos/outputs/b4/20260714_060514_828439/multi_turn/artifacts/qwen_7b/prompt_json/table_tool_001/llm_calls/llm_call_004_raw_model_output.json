@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"表格 tables/results.csv 包含 3 列：task, score, latency。预览内容如下：{'task': 'read_file', 'score': '92', 'latency': '15.2'}；{'task': 'calculate', 'score': '98', 'latency': '3.1'}；{'task': 'search', 'score': '88', 'latency': '20.5'}。score 列的平均值为 92.67，latency 列的平均值为 12.93。\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "表格 tables/results.csv 包含 3 列：task, score, latency。预览内容如下：{'task': 'read_file', 'score': '92', 'latency': '15.2'}；{'task': 'calculate', 'score': '98', 'latency': '3.1'}；{'task': 'search', 'score': '88', 'latency': '20.5'}。score 列的平均值为 92.67，latency 列的平均值为 12.93。",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"表格 tables/results.csv 包含 3 列：task, score, latency。预览内容如下：{'task': 'read_file', 'score': '92', 'latency': '15.2'}；{'task': 'calculate', 'score': '98', 'latency': '3.1'}；{'task': 'search', 'score': '88', 'latency': '20.5'}。score 列的平均值为 92.67，latency 列的平均值为 12.93。\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 2871,
+        "output_tokens": 133,
+        "elapsed_seconds": 32.6509
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T06:46:22+08:00",
+  "usage": {
+    "input_tokens": 2871,
+    "output_tokens": 133,
+    "elapsed_seconds": 32.6509
+  }
+}

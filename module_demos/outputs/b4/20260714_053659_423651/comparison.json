@@ -1,0 +1,38 @@
+{
+  "prompt_json": {
+    "status": "success",
+    "tool_call_count": 2,
+    "tool_name_correct": true,
+    "args_complete": true,
+    "structured_output_success": true,
+    "input_tokens": 1563,
+    "output_tokens": 71,
+    "elapsed_seconds": 5.103
+  },
+  "native_tools": {
+    "status": "success",
+    "tool_call_count": 2,
+    "tool_name_correct": true,
+    "args_complete": true,
+    "structured_output_success": true,
+    "input_tokens": 1460,
+    "output_tokens": 58,
+    "elapsed_seconds": 4.218
+  },
+  "adaptive": {
+    "status": "success",
+    "tool_call_count": 2,
+    "tool_name_correct": true,
+    "args_complete": true,
+    "structured_output_success": true,
+    "input_tokens": 3282,
+    "output_tokens": 381,
+    "elapsed_seconds": 29.6975,
+    "selected_mode": "native_tools",
+    "strategy": "react_one_round",
+    "complexity": "low",
+    "confidence": 1.0,
+    "llm_call_count": 2,
+    "tool_rounds_used": 1
+  }
+}

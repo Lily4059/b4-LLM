@@ -1,0 +1,2 @@
+{"plan_state":{"mode":"plan_execute","steps":[{"step":1,"title":"解释什么是tool calling","status":"completed","summary":"直接回答","error":""}],"evidence_policy":"lite"}}
+解释一下什么是 tool calling：tool calling 是指在自动化任务中调用外部工具来获取所需的信息或完成特定任务的过程。这些工具可以是计算器、文件读取器、搜索引擎等，通过调用它们可以解决当前步骤中的问题或获取必要的数据。

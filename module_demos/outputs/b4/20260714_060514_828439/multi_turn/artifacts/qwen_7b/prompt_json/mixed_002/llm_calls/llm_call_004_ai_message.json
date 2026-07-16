@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "请提供一个有效的max_chars值以读取文件docs/tool_calling.md。",
+  "tool_calls": []
+}

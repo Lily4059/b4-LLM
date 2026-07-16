@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "1. 读取 docs/tool_calling.md 文件内容；2. 分析文件核心观点；3. 用一句话总结核心观点。",
+  "tool_calls": []
+}

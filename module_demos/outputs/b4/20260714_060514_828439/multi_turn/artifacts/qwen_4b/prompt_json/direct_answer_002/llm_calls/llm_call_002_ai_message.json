@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:1:ReAct 是边推理边行动，每次循环交替执行思考与工具调用",
+  "tool_calls": []
+}

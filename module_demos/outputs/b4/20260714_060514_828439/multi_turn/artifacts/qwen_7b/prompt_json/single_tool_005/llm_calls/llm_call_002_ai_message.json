@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_FAIL:1:文件不存在，请检查文件路径是否正确。",
+  "tool_calls": []
+}

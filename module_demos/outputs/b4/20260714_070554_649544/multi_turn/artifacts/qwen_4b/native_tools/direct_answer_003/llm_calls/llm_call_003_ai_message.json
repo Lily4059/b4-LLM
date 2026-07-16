@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "当前步骤不需要工具，可以直接完成。\n\nSTEP_DONE:1: 已完成",
+  "tool_calls": []
+}

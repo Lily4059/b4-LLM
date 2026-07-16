@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "由于无需调用工具，直接回答即可。",
+  "tool_calls": []
+}

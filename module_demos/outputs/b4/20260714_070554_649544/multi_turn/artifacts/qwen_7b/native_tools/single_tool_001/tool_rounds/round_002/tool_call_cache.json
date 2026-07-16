@@ -1,0 +1,45 @@
+{
+  "e27c25f65a26178b98d78cb1774934fdeed1ecff03078b9455896caa98b9e54f": {
+    "name": "calculator",
+    "args": {
+      "expression": "3"
+    },
+    "created_at": "2026-07-14T07:46:28+08:00",
+    "skill_result": {
+      "skill_name": "calculator",
+      "status": "success",
+      "input": {
+        "expression": "3"
+      },
+      "output": {
+        "result": 3
+      },
+      "error": null,
+      "latency_ms": 0.219
+    }
+  },
+  "9a2a28efca04cbcbc50902e0429a6ff2a60f494eb73f9378e601b0edb7c7e7c0": {
+    "name": "file_reader",
+    "args": {
+      "path": "docs/agent_intro.txt",
+      "max_chars": 92
+    },
+    "created_at": "2026-07-14T07:46:28+08:00",
+    "skill_result": {
+      "skill_name": "file_reader",
+      "status": "success",
+      "input": {
+        "path": "docs/agent_intro.txt",
+        "max_chars": 92
+      },
+      "output": {
+        "content": "Agent 系统通常由模型、工具、记忆和执行循环组成。\n工具调用让模型能够读取本地文件、执行计算，并把结果用于后续回答。\nMemory 为 Agent 提供全局知识和历史对话上下文。\n",
+        "num_chars": 92,
+        "source": "docs/agent_intro.txt",
+        "truncated": false
+      },
+      "error": null,
+      "latency_ms": 0.292
+    }
+  }
+}

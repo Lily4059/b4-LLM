@@ -1,0 +1,52 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/agent_intro.txt"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md"
+      }
+    },
+    {
+      "id": "call_003",
+      "name": "table_analyzer",
+      "args": {
+        "path": "tables/results.csv",
+        "describe": true,
+        "max_rows_preview": 10
+      }
+    },
+    {
+      "id": "call_004",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/agent_intro.txt"
+      }
+    },
+    {
+      "id": "call_005",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md"
+      }
+    },
+    {
+      "id": "call_006",
+      "name": "table_analyzer",
+      "args": {
+        "path": "tables/results.csv",
+        "describe": true,
+        "max_rows_preview": 10
+      }
+    }
+  ]
+}

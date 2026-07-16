@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"plan\":[\"检查文件是否存在\"]}",
+  "tool_calls": []
+}

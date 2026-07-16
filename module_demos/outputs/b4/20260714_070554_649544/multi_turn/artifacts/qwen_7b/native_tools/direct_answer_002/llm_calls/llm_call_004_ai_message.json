@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\n  \"tool_calls\": []\n}",
+  "tool_calls": []
+}

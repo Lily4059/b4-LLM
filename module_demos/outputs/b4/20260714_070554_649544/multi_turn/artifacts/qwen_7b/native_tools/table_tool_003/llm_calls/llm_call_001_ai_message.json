@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\n  \"plan\": [\n    \"<tool_call>\\n{\\\"name\\\": \\\"table_analyzer\\\", \\\"arguments\\\": {\\\"path\\\": \\\"tables/results.csv\\\", \\\"describe\\\": true}}\\n</tool_call>\"\n  ]\n}",
+  "tool_calls": []
+}

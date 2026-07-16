@@ -1,0 +1,137 @@
+{
+  "status": "success",
+  "tool_rounds_used": 1,
+  "llm_call_count": 4,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "请用三条要点解释什么是 evidence（证据）约束，在 Agent 系统中有什么用。",
+        "status": "completed",
+        "summary": "当前步骤不需要工具，可以直接完成。\n\nSTEP_DONE:1: 已完成",
+        "error": ""
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_001",
+            "name": "calculator",
+            "args": {
+              "expression": "1+1"
+            }
+          }
+        ]
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "execute",
+      "ai_message": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_001",
+            "name": "calculator",
+            "args": {
+              "expression": "1+1"
+            }
+          }
+        ]
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [
+        {
+          "role": "tool",
+          "tool_call_id": "call_001",
+          "name": "calculator",
+          "content": "{\"skill_name\": \"calculator\", \"status\": \"success\", \"input\": {\"expression\": \"1+1\"}, \"output\": {\"result\": 2}, \"error\": null, \"latency_ms\": 0.721}",
+          "status": "success"
+        }
+      ],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请用三条要点解释什么是 evidence（证据）约束，在 Agent 系统中有什么用。",
+            "status": "pending",
+            "summary": "",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      },
+      "tool_messages_compression": {
+        "enabled": true,
+        "compressed_messages": 0
+      },
+      "tool_round_dir": "/root/siton-tmp/assignment_B/agent/module_demos/outputs/b4/20260714_070554_649544/multi_turn/artifacts/qwen_4b/native_tools/direct_answer_003/tool_rounds/round_001"
+    },
+    {
+      "turn_index": 3,
+      "phase": "execute",
+      "ai_message": {
+        "role": "assistant",
+        "content": "当前步骤不需要工具，可以直接完成。\n\nSTEP_DONE:1: 已完成",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请用三条要点解释什么是 evidence（证据）约束，在 Agent 系统中有什么用。",
+            "status": "completed",
+            "summary": "当前步骤不需要工具，可以直接完成。\n\nSTEP_DONE:1: 已完成",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    },
+    {
+      "turn_index": 4,
+      "phase": "finish",
+      "ai_message": {
+        "role": "assistant",
+        "content": "1. **证据（Evidence）约束**是指 Agent 系统在生成回答或执行决策时，必须基于可验证的外部事实或数据源，而非仅依赖内部推理或假设。它要求系统明确标注信息来源，确保结论有据可依。\n\n2. **在 Agent 系统中的作用**：\n   - **提升可靠性**：通过强制引用外部证据，减少幻觉和错误推理，提高回答的准确性和可信度。\n   - **增强可追溯性**：用户可验证结论的来源，便于审计和调试，尤其适用于医疗、法律、金融等高风险场景。\n   - **支持复杂任务协作**：在多 Agent 协作中，证据约束确保各 Agent 基于一致的事实基础进行推理，避免信息冲突。\n\n3. **实际应用价值**：\n   - 在搜索、分析、决策类任务中，证据约束能显著降低错误率。\n   - 对于需要合规性或透明度的场景（如客服、法律咨询），证据约束是满足用户信任的关键机制。",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请用三条要点解释什么是 evidence（证据）约束，在 Agent 系统中有什么用。",
+            "status": "completed",
+            "summary": "当前步骤不需要工具，可以直接完成。\n\nSTEP_DONE:1: 已完成",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": null
+}

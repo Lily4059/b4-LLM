@@ -1,0 +1,230 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_003",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_004",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_005",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_006",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_007",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_008",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_009",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_010",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_011",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_012",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_013",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_014",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_015",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_016",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_017",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_018",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_019",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_020",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_021",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_022",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_023",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_024",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_025",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_026",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_027",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_028",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_029",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_030",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_031",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_032",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    }
+  ]
+}

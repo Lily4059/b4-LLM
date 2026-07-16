@@ -1,0 +1,1 @@
+tables/results.csv 包含3行数据，共3列：task、score、latency。预览内容显示：read_file任务得分92、延迟15.2；calculate任务得分98、延迟3.1；search任务得分88、延迟20.5。score统计：最小88，最大98，均值92.67；latency统计：最小3.1，最大20.5，均值12.93。

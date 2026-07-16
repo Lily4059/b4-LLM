@@ -1,0 +1,44 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. Use available tools when needed."
+  },
+  {
+    "role": "user",
+    "content": "请用三条要点解释什么是 evidence（证据）约束，在 Agent 系统中有什么用。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {
+          "query": "evidence constraint",
+          "root_dir": ".",
+          "file_types": [
+            "txt",
+            "md"
+          ]
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "local_file_search",
+    "content": "{\"skill_name\": \"local_file_search\", \"status\": \"success\", \"input\": {\"query\": \"evidence constraint\", \"root_dir\": \".\", \"file_types\": [\"txt\", \"md\"]}, \"output\": {\"query\": \"evidence constraint\", \"root_dir\": \".\", \"files_scanned\": 11, \"total_matches\": 0, \"truncated_files\": 0, \"skipped_files\": 0, \"results\": [], \"compressed\": false, \"original_result_count\": 0}, \"error\": null, \"latency_ms\": 3.888}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "已获得本轮工具结果。请基于最新证据继续决策：如果信息已足够，就直接输出最终回答；如果仍缺关键证据，也可以继续请求下一轮工具；但优先利用现有证据收敛，不要重复已经成功返回的相同调用。"
+  },
+  {
+    "role": "assistant",
+    "content": "根据当前可用的信息，我将尝试直接回答您的问题。\n\n在Agent系统中，“证据”约束通常指的是在推理过程中必须依赖的具体事实或数据，而不是基于假设或推测的信息。以下是关于“证据”约束的三点解释：\n\n1. **定义**：证据约束是指在决策或推理过程中需要依赖的具体事实或数据，这些数据可以直接支持或反驳某个假设。\n2. **作用**：通过应用证据约束，可以确保决策过程更加可靠和准确，因为它们依赖于实际存在的数据而非主观判断。\n3. **应用场景**：在Agent系统中，证据约束常用于知识库查询、规则引擎和自动推理等场景，以提高系统的决策质量。\n\n希望这能帮助您理解“证据”约束的概念及其在Agent系统中的应用。如果您有更多问题或需要进一步澄清，请随时提问。",
+    "tool_calls": []
+  }
+]

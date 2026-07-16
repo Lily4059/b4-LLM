@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"{\\\"plan\\\":[\\\"调用table_analyzer分析results.csv文件\\\"]}\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "{\"plan\":[\"调用table_analyzer分析results.csv文件\"]}",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"{\\\"plan\\\":[\\\"调用table_analyzer分析results.csv文件\\\"]}\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 1625,
+        "output_tokens": 25,
+        "elapsed_seconds": 6.9431
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T06:47:27+08:00",
+  "usage": {
+    "input_tokens": 1625,
+    "output_tokens": 25,
+    "elapsed_seconds": 6.9431
+  }
+}

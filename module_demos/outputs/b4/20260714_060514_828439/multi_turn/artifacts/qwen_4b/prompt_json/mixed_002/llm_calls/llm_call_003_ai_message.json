@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:1:读取 docs/tool_calling.md 文件内容完成",
+  "tool_calls": []
+}

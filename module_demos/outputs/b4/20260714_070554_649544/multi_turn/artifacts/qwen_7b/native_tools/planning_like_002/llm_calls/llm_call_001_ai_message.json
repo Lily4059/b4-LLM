@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\n  \"plan\": [\n    \"使用 local_file_search 在 docs 目录中搜索与 Memory 相关的内容\",\n    \"使用 file_reader 读取最相关文件的内容\",\n    \"总结最相关文件的内容\"\n  ]\n}",
+  "tool_calls": []
+}

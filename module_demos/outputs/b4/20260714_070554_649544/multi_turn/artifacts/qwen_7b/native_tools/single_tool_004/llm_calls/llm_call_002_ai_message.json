@@ -1,0 +1,13 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "tool_calling.md"
+      }
+    }
+  ]
+}

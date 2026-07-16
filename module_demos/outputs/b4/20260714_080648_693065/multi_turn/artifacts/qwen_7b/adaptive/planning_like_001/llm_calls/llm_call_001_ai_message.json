@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "[\"搜索docs目录中与tool calling相关的文件\",\"读取最相关的文件内容\",\"总结关键结论\"]",
+  "tool_calls": []
+}

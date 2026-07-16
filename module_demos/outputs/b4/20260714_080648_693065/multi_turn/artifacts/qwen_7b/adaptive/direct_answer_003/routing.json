@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.95,
+  "reason": "通常0~1轮工具即可完成，不需要显式多步计划与状态推进。",
+  "llm_status": "success",
+  "llm_error": null
+}

@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.9,
+  "reason": "单轮工具调用即可完成任务",
+  "llm_status": "success",
+  "llm_error": null
+}

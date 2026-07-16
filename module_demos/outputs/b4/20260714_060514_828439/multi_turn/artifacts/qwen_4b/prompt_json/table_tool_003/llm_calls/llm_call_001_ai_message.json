@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "[\"步骤1：调用 table_analyzer 分析 tables/results.csv，获取列名、行数、列描述及预览数据。\",\"步骤2：根据分析结果，整理并输出每列的含义说明。\"]",
+  "tool_calls": []
+}

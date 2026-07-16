@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\n  \"plan\": [\n    \"直接回答\"\n  ]\n}",
+  "tool_calls": []
+}

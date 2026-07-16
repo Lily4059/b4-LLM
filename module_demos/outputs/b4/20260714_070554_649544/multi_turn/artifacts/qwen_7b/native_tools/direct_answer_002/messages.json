@@ -1,0 +1,71 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. Use available tools when needed."
+  },
+  {
+    "role": "user",
+    "content": "请用三句话说明 ReAct 和 Plan-and-Execute 的区别。"
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"tool_calls\": []\n}",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "你正在以 Plan-and-Execute 模式工作。\n目标是在保持计划状态同步和输出格式正确的前提下，用最短可行路径完成任务。\n请先在内部判断当前步骤最合适的动作，再只输出规定格式，不要展示长篇思维过程。\n\n<plan_state>\n{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"{\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 2, \"title\": \"\\\"tool_calls\\\": []\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 3, \"title\": \"}\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}], \"evidence_policy\": \"lite\"}\n</plan_state>\n\n执行规则：\n- 优先选择最小可行动作：能基于当前上下文直接完成当前步骤，就直接完成；只有缺失外部证据时再调用工具。\n- 若某些步骤标记为 low_value=true，你可以将其与相邻步骤合并完成，避免无意义的独立回合。\n- 如果你判断当前计划拆分过细、边界不合理，或在新证据下出现了更短更自然的执行路径，可以先输出 schema A，content 以 PLAN_UPDATE:<json> 开头，重写剩余未完成步骤；代码只会保留已完成步骤并替换后续计划。\n- 如果需要调用工具：输出 schema B，且 content 必须是空字符串。\n- 当前步骤不需要工具且你已完成：输出 schema A，content 以 STEP_DONE:<step_number>:<summary> 开头。\n- 如果步骤失败且需要回退/重试：输出 schema A 且 content 以 STEP_FAIL:<step_number>:<reason> 开头。\n- 文件、表格、搜索结果等外部事实必须基于真实工具证据；内部推理、简单计算、信息整理在不依赖外部证据时可直接完成当前步骤。\n- 对于文件/表格缺失类失败：在输出 STEP_FAIL 之前，优先尝试一次最小修复重试（例如修正路径/目录前缀），或用 ASK_USER 让用户确认文件位置。\n- 若遇到关键歧义/需要用户确认：输出 schema A，content 以 ASK_USER:<question> 开头，并在后续行提供可选项（用短列表）。\n- 当有多个可行方案时：先在内部比较，再输出你选择的那个动作；只有确实需要用户决定时才使用 ASK_USER。\n- 当阻塞来自外部信息缺口而不是推理本身时（例如候选文件不足、路径/范围需要用户确认、要求与当前工作区事实不匹配），优先把缺口外化为 ASK_USER，而不是仅在内部反思或重复相似搜索。ASK_USER 可以请用户确认是否接受当前证据、补充资源，或放宽约束。\n- 只有当所有步骤 status 都变为 completed 后，才输出最终回答（schema A，content 为正常回答文本，不要以 STEP_DONE/STEP_FAIL 开头）。\n\n开始执行计划。请先完成第 1 步。需要工具就调用；完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"tool_calls\": []\n}",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "当前计划状态：{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"{\", \"status\": \"completed\", \"summary\": \"{\\n  \\\"tool_calls\\\": []\\n}\", \"error\": \"\"}, {\"step\": 2, \"title\": \"\\\"tool_calls\\\": []\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 3, \"title\": \"}\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}], \"evidence_policy\": \"lite\"}\n请继续完成第 2 步。完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"tool_calls\": []\n}",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "当前计划状态：{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"{\", \"status\": \"completed\", \"summary\": \"{\\n  \\\"tool_calls\\\": []\\n}\", \"error\": \"\"}, {\"step\": 2, \"title\": \"\\\"tool_calls\\\": []\", \"status\": \"completed\", \"summary\": \"{\\n  \\\"tool_calls\\\": []\\n}\", \"error\": \"\"}, {\"step\": 3, \"title\": \"}\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}], \"evidence_policy\": \"lite\"}\n请继续完成第 3 步。完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "{\n  \"tool_calls\": []\n}",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "所有步骤已完成。请输出最终回答（schema A），不要以 STEP_DONE/STEP_FAIL 开头。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {
+          "query": "Plan-and-Execute ReAct 区别"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "local_file_search",
+    "content": "{\"skill_name\": \"local_file_search\", \"status\": \"success\", \"input\": {\"query\": \"Plan-and-Execute ReAct 区别\"}, \"output\": {\"query\": \"Plan-and-Execute ReAct 区别\", \"root_dir\": \".\", \"files_scanned\": 83, \"total_matches\": 15, \"truncated_files\": 0, \"skipped_files\": 0, \"results\": [{\"path\": \"messages/eval_cases_feature5_extended.json\", \"score\": 97.911, \"snippet\": \"{ \\\"batch_eval\\\": { \\\"agent_mode\\\": \\\"adaptive_execute\\\", \\\"toolset\\\": \\\"basic_tools\\\", \\\"llm_mode\\\": \\\"prompt_json\\\", \\\"max_turns\\\": 3, \\\"max_plan_steps\\\": 6, \\\"evidence_policy\\\": \\\"lite\\\", \\\"save_memory\\\"\\n...\\nrce\\\": \\\"static\\\", \\\"tools_schema_path\\\": \\\"./tools_schema_ba...\"}, {\"path\": \"runtime_input_plan_execute.json\", \"score\": 61.501, \"snippet\": \"{ \\\"conversation_id\\\": \\\"conv_plan_execute_001\\\", \\\"execution_mode\\\": \\\"integrated\\\", \\\"agent_mode\\\": \\\"plan_execute\\\", \\\"agent_options\\\": { \\\"llm_mode\\\": \\\"prompt_json\\\", \\\"max_plan_ste...\"}, {\"path\": \"messages/messages_life_rent_plan_execute.json\", \"score\": 51.086, \"snippet\": \"...ple tools are independently needed, request them in the same response.\\\" }, { \\\"role\\\": \\\"user\\\", \\\"content\\\": \\\"生活场景：我准备在下周内完成租房决策并制定月度预算。\\\\n\\\\n请以 Plan-and-Execute 的方式完成：\\\\n1) 先在 docs/life_\\n...\\n-5 个文件并做对比分析（不要逐条复述原文）。\\\\n3) 读取并分析 tables/life_rent_budg...\"}, {\"path\": \"runtime_input_adaptive_execute.json\", \"score\": 36.028, \"snippet\": \"...\\\"conversation_id\\\": \\\"conv_adaptive_execute_001\\\", \\\"execution_mode\\\": \\\"integrated\\\", \\\"agent_mode\\\": \\\"adaptive_execute\\\", \\\"agent_options\\\": { \\\"max_plan_steps\\\": 6, \\\"evidence_policy\\\": \\\"lite\\\"\\n...\\n\\\"prompt_json\\\" }, \\\"user_input\\\": \\\"请先搜索 docs 目录中与 tool ca...\"}, {\"path\": \"runtime_input_react_one_round.json\", \"score\": 32.325, \"snippet\": \"{ \\\"conversation_id\\\": \\\"conv_react_one_round_001\\\", \\\"execution_mode\\\": \\\"integrated\\\", \\\"agent_mode\\\": \\\"react_one_round\\\", \\\"agent_options\\\": { \\\"llm_mode\\\": \\\"native_tools\\\" }, \\\"user...\"}], \"compressed\": false, \"original_result_count\": 5}, \"error\": null, \"latency_ms\": 6.606}",
+    "status": "success"
+  },
+  {
+    "role": "assistant",
+    "content": "Plan-and-Execute 和 ReAct 的主要区别在于它们的工作流程和策略：\n\n1. **Plan-and-Execute**：这种模式强调详细的计划制定和执行。它会先生成一个详细的行动计划，然后逐步执行这些计划中的步骤。这种方式适合那些需要高度结构化和控制的任务，确保每一步都按照预设的计划进行。\n\n2. **ReAct**：相比之下，ReAct 模式更加灵活和响应式。它在执行过程中不断评估当前的状态，并根据新的信息调整下一步的动作。这种方式更适合处理不确定性高、变化快的任务，能够更好地适应环境的变化。\n\n这两种模式各有优势，适用于不同类型的任务和情境。",
+    "tool_calls": []
+  }
+]

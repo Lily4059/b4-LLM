@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "计算结果：(1024/8+37)*19-5 = 3130.0",
+  "tool_calls": []
+}

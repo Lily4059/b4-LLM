@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "ASK_USER:请问您希望先阅读哪个文件？可选项：[docs/agent_intro.txt, docs/search_skill_demo.md, docs/tool_calling.md]",
+  "tool_calls": []
+}

@@ -1,0 +1,36 @@
+{
+  "cases_path": "/root/siton-tmp/assignment_B/agent/data/messages/eval_cases_feature5.json",
+  "profiles": [
+    "qwen_4b",
+    "qwen_7b"
+  ],
+  "modes": [
+    "native_tools"
+  ],
+  "profile_targets": {
+    "qwen_4b": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+    "qwen_7b": "/root/siton-tmp/assignment_B/Qwen2.5-7B"
+  },
+  "summary": {
+    "qwen_4b::native_tools": {
+      "cases": 6,
+      "success_rate": 0.6667,
+      "structured_output_rate": 1.0,
+      "tool_match_rate": 0.6667,
+      "args_complete_rate": 1.0,
+      "avg_input_tokens": 1485.33,
+      "avg_output_tokens": 53.67,
+      "avg_elapsed_seconds": 3.7371
+    },
+    "qwen_7b::native_tools": {
+      "cases": 6,
+      "success_rate": 0.3333,
+      "structured_output_rate": 1.0,
+      "tool_match_rate": 0.5,
+      "args_complete_rate": 0.5,
+      "avg_input_tokens": 1346.67,
+      "avg_output_tokens": 39.83,
+      "avg_elapsed_seconds": 9.4505
+    }
+  }
+}

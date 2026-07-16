@@ -1,0 +1,69 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_003",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_004",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_005",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_006",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_007",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_008",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    },
+    {
+      "id": "call_009",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    }
+  ]
+}

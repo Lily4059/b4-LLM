@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"{\\\"complexity\\\":\\\"low\\\",\\\"confidence\\\":0.9,\\\"reason\\\":\\\"三份文档的内容可以通过直接分析得出，无需外部工具帮助。\\\"}\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "{\"complexity\":\"low\",\"confidence\":0.9,\"reason\":\"三份文档的内容可以通过直接分析得出，无需外部工具帮助。\"}",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"{\\\"complexity\\\":\\\"low\\\",\\\"confidence\\\":0.9,\\\"reason\\\":\\\"三份文档的内容可以通过直接分析得出，无需外部工具帮助。\\\"}\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 725,
+        "output_tokens": 39,
+        "elapsed_seconds": 9.801
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T08:30:44+08:00",
+  "usage": {
+    "input_tokens": 725,
+    "output_tokens": 39,
+    "elapsed_seconds": 9.801
+  }
+}

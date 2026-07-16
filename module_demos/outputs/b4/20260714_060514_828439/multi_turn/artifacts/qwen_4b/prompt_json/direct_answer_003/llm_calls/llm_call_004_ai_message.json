@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:3:减少幻觉与错误推理，强制Agent在缺乏证据时拒绝生成内容，避免无根据的断言。",
+  "tool_calls": []
+}

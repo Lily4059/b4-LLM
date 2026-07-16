@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"low\",\"confidence\":0.9,\"reason\":\"直接从文件中提取关键信息即可完成任务\"}",
+  "tool_calls": []
+}

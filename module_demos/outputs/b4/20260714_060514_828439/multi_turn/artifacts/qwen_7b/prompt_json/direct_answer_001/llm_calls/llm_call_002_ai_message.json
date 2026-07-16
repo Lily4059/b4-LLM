@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "tool calling 是指在对话过程中调用预设工具来获取所需信息的过程。",
+  "tool_calls": []
+}

@@ -1,0 +1,69 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. Use available tools when needed."
+  },
+  {
+    "role": "user",
+    "content": "请用三条要点解释什么是 evidence（证据）约束，在 Agent 系统中有什么用。"
+  },
+  {
+    "role": "assistant",
+    "content": "[\"定义：Evidence约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。\",\"作用1：提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。\",\"作用2：减少幻觉与错误推理，强制Agent在缺乏证据时拒绝生成内容，避免无根据的断言。\",\"作用3：支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。\"]",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "你正在以 Plan-and-Execute 模式工作。\n目标是在保持计划状态同步和输出格式正确的前提下，用最短可行路径完成任务。\n请先在内部判断当前步骤最合适的动作，再只输出规定格式，不要展示长篇思维过程。\n\n<plan_state>\n{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"定义：Evidence约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 2, \"title\": \"作用1：提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 3, \"title\": \"作用2：减少幻觉与错误推理，强制Agent在缺乏证据时拒绝生成内容，避免无根据的断言。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 4, \"title\": \"作用3：支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\", \"low_value\": true}], \"evidence_policy\": \"lite\"}\n</plan_state>\n\n执行规则：\n- 优先选择最小可行动作：能基于当前上下文直接完成当前步骤，就直接完成；只有缺失外部证据时再调用工具。\n- 若某些步骤标记为 low_value=true，你可以将其与相邻步骤合并完成，避免无意义的独立回合。\n- 如果你判断当前计划拆分过细、边界不合理，或在新证据下出现了更短更自然的执行路径，可以先输出 schema A，content 以 PLAN_UPDATE:<json> 开头，重写剩余未完成步骤；代码只会保留已完成步骤并替换后续计划。\n- 如果需要调用工具：输出 schema B，且 content 必须是空字符串。\n- 当前步骤不需要工具且你已完成：输出 schema A，content 以 STEP_DONE:<step_number>:<summary> 开头。\n- 如果步骤失败且需要回退/重试：输出 schema A 且 content 以 STEP_FAIL:<step_number>:<reason> 开头。\n- 文件、表格、搜索结果等外部事实必须基于真实工具证据；内部推理、简单计算、信息整理在不依赖外部证据时可直接完成当前步骤。\n- 对于文件/表格缺失类失败：在输出 STEP_FAIL 之前，优先尝试一次最小修复重试（例如修正路径/目录前缀），或用 ASK_USER 让用户确认文件位置。\n- 若遇到关键歧义/需要用户确认：输出 schema A，content 以 ASK_USER:<question> 开头，并在后续行提供可选项（用短列表）。\n- 当有多个可行方案时：先在内部比较，再输出你选择的那个动作；只有确实需要用户决定时才使用 ASK_USER。\n- 当阻塞来自外部信息缺口而不是推理本身时（例如候选文件不足、路径/范围需要用户确认、要求与当前工作区事实不匹配），优先把缺口外化为 ASK_USER，而不是仅在内部反思或重复相似搜索。ASK_USER 可以请用户确认是否接受当前证据、补充资源，或放宽约束。\n- 只有当所有步骤 status 都变为 completed 后，才输出最终回答（schema A，content 为正常回答文本，不要以 STEP_DONE/STEP_FAIL 开头）。\n\n开始执行计划。请先完成第 1 步。需要工具就调用；完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "STEP_DONE:1:证据约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "当前计划状态：{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"定义：Evidence约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。\", \"status\": \"completed\", \"summary\": \"证据约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。\", \"error\": \"\"}, {\"step\": 2, \"title\": \"作用1：提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 3, \"title\": \"作用2：减少幻觉与错误推理，强制Agent在缺乏证据时拒绝生成内容，避免无根据的断言。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 4, \"title\": \"作用3：支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\", \"low_value\": true}], \"evidence_policy\": \"lite\"}\n请继续完成第 2 步。完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "STEP_DONE:2:提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "当前计划状态：{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"定义：Evidence约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。\", \"status\": \"completed\", \"summary\": \"证据约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。\", \"error\": \"\"}, {\"step\": 2, \"title\": \"作用1：提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。\", \"status\": \"completed\", \"summary\": \"提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。\", \"error\": \"\"}, {\"step\": 3, \"title\": \"作用2：减少幻觉与错误推理，强制Agent在缺乏证据时拒绝生成内容，避免无根据的断言。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}, {\"step\": 4, \"title\": \"作用3：支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\", \"low_value\": true}], \"evidence_policy\": \"lite\"}\n请继续完成第 3 步。完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "STEP_DONE:3:减少幻觉与错误推理，强制Agent在缺乏证据时拒绝生成内容，避免无根据的断言。",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "当前计划状态：{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"定义：Evidence约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。\", \"status\": \"completed\", \"summary\": \"证据约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。\", \"error\": \"\"}, {\"step\": 2, \"title\": \"作用1：提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。\", \"status\": \"completed\", \"summary\": \"提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。\", \"error\": \"\"}, {\"step\": 3, \"title\": \"作用2：减少幻觉与错误推理，强制Agent在缺乏证据时拒绝生成内容，避免无根据的断言。\", \"status\": \"completed\", \"summary\": \"减少幻觉与错误推理，强制Agent在缺乏证据时拒绝生成内容，避免无根据的断言。\", \"error\": \"\"}, {\"step\": 4, \"title\": \"作用3：支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\", \"low_value\": true}], \"evidence_policy\": \"lite\"}\n请继续完成第 4 步。完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "STEP_DONE:4:支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "不能将第 4 步标记为完成，因为当前没有足够的真实工具证据支撑这一步：作用3：支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。\n请先完成第 4 步所需工具调用，再输出 STEP_DONE:4:...\n不要基于猜测或估算直接完成。\n如果你判断当前缺口来自外部信息不足、用户约束需要确认，或工作区本身缺少满足条件的资源，也可以直接输出 ASK_USER: 把缺口说清楚，而不是只做内部反思。"
+  },
+  {
+    "role": "assistant",
+    "content": "STEP_FAIL:4:无法提供真实工具证据支撑'支持自动化验证与合规'的作用，因为当前对话上下文未提供任何法律、医疗或金融领域的具体案例、法规文档或验证机制数据。需要用户确认是否提供相关资源，或是否接受基于通用知识而非工具证据的说明。",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "当前仍有未解决的失败步骤：第 4 步“作用3：支持自动化验证与合规，使Agent输出可被程序化检查，适用于法律、医疗、金融等高风险场景。”。在所有步骤 completed 之前，不要输出最终回答。\n请继续只处理这一步：\n- 若已有工具证据足以说明该步骤客观上已完成，输出 STEP_DONE:4:...\n- 若还可修复，请只请求该步骤所需的新工具调用；\n- 若必须让用户确认，输出 ASK_USER:..."
+  },
+  {
+    "role": "assistant",
+    "content": "ASK_USER: 要完成第4步关于'支持自动化验证与合规'的说明，需要具体证据（如法规文档、验证机制案例或行业规范）。请确认：1) 是否提供相关文档/数据？2) 是否接受基于通用知识而非工具证据的说明？3) 是否需要搜索特定领域的合规标准？",
+    "tool_calls": []
+  }
+]

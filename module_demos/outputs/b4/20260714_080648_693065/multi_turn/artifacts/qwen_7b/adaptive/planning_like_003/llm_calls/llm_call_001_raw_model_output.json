@@ -1,0 +1,51 @@
+{
+  "mode": "native_tools",
+  "effective_mode": "native_tools",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "<tool_call>\n<function=local_file_search>\n<parameter>\n<query>Agent 系统组成</query>\n<root_dir>docs</root_dir>\n<file_types>\n<item>.txt</item>\n<item>.md</item>\n</file_types>\n<top_k>2</top_k>\n</parameter>\n</function>\n</tool_call>",
+  "parsed_candidate": {
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {}
+      }
+    ]
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "<tool_call>\n<function=local_file_search>\n<parameter>\n<query>Agent 系统组成</query>\n<root_dir>docs</root_dir>\n<file_types>\n<item>.txt</item>\n<item>.md</item>\n</file_types>\n<top_k>2</top_k>\n</parameter>\n</function>\n<tool_call>",
+      "usage": {
+        "input_tokens": 1375,
+        "output_tokens": 71,
+        "elapsed_seconds": 16.34
+      },
+      "error": {
+        "type": "ToolUsageRetry",
+        "message": "task-specific tool usage policy requires at least one tool call before answering"
+      }
+    },
+    {
+      "attempt_index": 2,
+      "raw_text": "<tool_call>\n<function=local_file_search>\n<parameter>\n<query>Agent 系统组成</query>\n<root_dir>docs</root_dir>\n<file_types>\n<item>.txt</item>\n<item>.md</item>\n</file_types>\n<top_k>2</top_k>\n</parameter>\n</function>\n</tool_call>",
+      "usage": {
+        "input_tokens": 1565,
+        "output_tokens": 71,
+        "elapsed_seconds": 17.1963
+      }
+    }
+  ],
+  "repair_attempted": true,
+  "generated_at": "2026-07-14T08:35:02+08:00",
+  "usage": {
+    "input_tokens": 2940,
+    "output_tokens": 142,
+    "elapsed_seconds": 33.5363
+  }
+}

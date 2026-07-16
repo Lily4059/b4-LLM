@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"plan\":[\"读取 docs/agent_intro.txt\",\"读取 docs/tool_calling.md\"]}",
+  "tool_calls": []
+}

@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"low\",\"confidence\":0.9,\"reason\":\"三份文档的内容可以通过直接分析得出，无需外部工具帮助。\"}",
+  "tool_calls": []
+}

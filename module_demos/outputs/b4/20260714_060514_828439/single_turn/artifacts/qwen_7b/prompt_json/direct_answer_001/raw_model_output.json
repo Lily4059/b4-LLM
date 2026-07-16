@@ -1,0 +1,58 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"\",\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"args\":{\"query\":\"什么是 tool calling\",\"root_dir\":\".\",\"file_types\":[\"txt\",\"md\"]}}]}",
+  "parsed_candidate": {
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {
+          "query": "什么是 tool calling",
+          "root_dir": ".",
+          "file_types": [
+            "txt",
+            "md"
+          ]
+        }
+      }
+    ]
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"工具调用是指在对话中使用预定义函数来获取额外信息或执行任务的过程。\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 1489,
+        "output_tokens": 29,
+        "elapsed_seconds": 6.6313
+      },
+      "error": {
+        "type": "ToolUsageRetry",
+        "message": "task-specific tool usage policy requires at least one tool call before answering"
+      }
+    },
+    {
+      "attempt_index": 2,
+      "raw_text": "{\"content\":\"\",\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"args\":{\"query\":\"什么是 tool calling\",\"root_dir\":\".\",\"file_types\":[\"txt\",\"md\"]}}]}",
+      "usage": {
+        "input_tokens": 1696,
+        "output_tokens": 42,
+        "elapsed_seconds": 10.3545
+      }
+    }
+  ],
+  "repair_attempted": true,
+  "generated_at": "2026-07-14T06:05:58+08:00",
+  "usage": {
+    "input_tokens": 3185,
+    "output_tokens": 71,
+    "elapsed_seconds": 16.9858
+  }
+}

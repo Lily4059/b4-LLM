@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "ASK_USER: 请确认docs/tool_calling.md文件的路径是否正确，并提供正确的路径。",
+  "tool_calls": []
+}

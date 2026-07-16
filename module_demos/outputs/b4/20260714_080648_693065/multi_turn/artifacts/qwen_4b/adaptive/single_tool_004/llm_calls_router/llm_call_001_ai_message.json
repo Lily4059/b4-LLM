@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "任务要求查看 docs/tool_calling.md 并总结，属于单步工具调用，无需多轮计划或状态推进，符合 low 复杂度定义。",
+  "tool_calls": []
+}

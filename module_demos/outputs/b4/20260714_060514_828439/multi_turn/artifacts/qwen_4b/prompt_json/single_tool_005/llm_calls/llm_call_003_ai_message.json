@@ -1,0 +1,14 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "messages/eval_cases_feature5_extended.json",
+        "max_chars": 1200
+      }
+    }
+  ]
+}

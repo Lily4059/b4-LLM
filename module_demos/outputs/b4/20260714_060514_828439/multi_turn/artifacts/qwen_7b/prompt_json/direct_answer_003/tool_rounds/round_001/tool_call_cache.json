@@ -1,0 +1,37 @@
+{
+  "71303633d37062e3221e673ac4340d70bd29b4f9d79244319beb23eee200eea5": {
+    "name": "local_file_search",
+    "args": {
+      "query": "证据约束",
+      "root_dir": ".",
+      "file_types": [
+        "txt",
+        "md"
+      ]
+    },
+    "created_at": "2026-07-14T06:25:55+08:00",
+    "skill_result": {
+      "skill_name": "local_file_search",
+      "status": "success",
+      "input": {
+        "query": "证据约束",
+        "root_dir": ".",
+        "file_types": [
+          "txt",
+          "md"
+        ]
+      },
+      "output": {
+        "query": "证据约束",
+        "root_dir": ".",
+        "files_scanned": 11,
+        "total_matches": 0,
+        "truncated_files": 0,
+        "skipped_files": 0,
+        "results": []
+      },
+      "error": null,
+      "latency_ms": 3.848
+    }
+  }
+}

@@ -1,0 +1,4 @@
+文件 `docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt` 不存在。
+
+**确认方式：**
+我调用了 `file_reader` 工具尝试读取该文件，工具返回了 `FileNotFoundError` 错误，明确提示 `"file not found: docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"`，且 `retryable` 字段为 `false`，这确认了该文件确实不存在于数据目录中。

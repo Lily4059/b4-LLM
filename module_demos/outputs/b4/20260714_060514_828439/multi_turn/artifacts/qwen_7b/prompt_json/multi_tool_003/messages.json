@@ -1,0 +1,10 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. Use available tools when needed."
+  },
+  {
+    "role": "user",
+    "content": "请在同一轮并行读取 docs/agent_intro.txt、docs/tool_calling.md、docs/tool_calling.md，并总结这些内容总体在讲什么。"
+  }
+]

@@ -1,0 +1,96 @@
+{
+  "1f684c32c49eec6448864b89d1e5b76e6967e7e27ae3e8e56e6b0a0fabeabb53": {
+    "name": "local_file_search",
+    "args": {
+      "query": "若文件不存在，使用 local_file_search 搜索类似文件名或相关文档",
+      "root_dir": ".",
+      "top_k": 8
+    },
+    "created_at": "2026-07-14T06:10:22+08:00",
+    "skill_result": {
+      "skill_name": "local_file_search",
+      "status": "success",
+      "input": {
+        "query": "若文件不存在，使用 local_file_search 搜索类似文件名或相关文档",
+        "root_dir": ".",
+        "top_k": 8
+      },
+      "output": {
+        "query": "若文件不存在，使用 local_file_search 搜索类似文件名或相关文档",
+        "root_dir": ".",
+        "files_scanned": 83,
+        "total_matches": 27,
+        "truncated_files": 0,
+        "skipped_files": 0,
+        "results": [
+          {
+            "path": "messages/eval_cases_feature5_extended.json",
+            "score": 461.76,
+            "snippet": "...\": \"single_tool_005\", \"title\": \"单工具读取文档-不存在文件\", \"category\": \"single_tool\", \"user_input\": \"请读取 docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt，如果文件不存在请说明原因并给出你能做的替代方案。\", \"expected_tools\": [\"file_reader\"], \"expected_match_type\": \"contains\" }, { \"id\": \"single_tool_002\", \"title\": \"...",
+            "line_number": 61,
+            "match_count": 62,
+            "match_type": "token"
+          },
+          {
+            "path": "b1_cases/README.md",
+            "score": 219.45,
+            "snippet": "...i_web\\server.py --host 0.0.0.0 --port 8010 ``` 在浏览器中打开服务器地址： ```text http://<服务器IP>:8010/ ``` ### 运行服务器上的批量 JSON 1. 打开左侧的“批量任务”页面。 2. 在“批量任务 JSON 文件路径”输入框中填写服务器项目内的相对路径： ```text data/b1_cases/b1_all_features_batch.json ``` 3. 保持下方“直接填写 JSON”文本框为空。 4. 点击“运行批量任务”。 5. 在页面结果区域直接查看每个任务的任务内容、运行状态、最终回答...",
+            "line_number": 56,
+            "match_count": 30,
+            "match_type": "token"
+          },
+          {
+            "path": "messages/messages_life_rent_plan_execute.json",
+            "score": 172.041,
+            "snippet": "...和主要超支来源。\\n4) 额外检查 docs/life_rent/listing_d.md（这是我朋友说的一个房源，但我不确定文件是否存在）。如果不存在，请不要让整个任务失败：基于现有信息继续完成前面三步，并说明你如何处理缺失信息。\\n\\n要求：\\n- 需要工具就调用。\\n- 允许部分失败：如果某个文件不存在，请只重试失败项或跳过它，不要重复执行已经成功的读取。\\n- 给出最终结论和一个可执行的下一步清单（3-6 条）。\\n\" } ]",
+            "line_number": 8,
+            "match_count": 23,
+            "match_type": "token"
+          },
+          {
+            "path": "runtime_input_plan_execute.json",
+            "score": 67.913,
+            "snippet": "...ent_options\": { \"llm_mode\": \"prompt_json\", \"max_plan_steps\": 6, \"evidence_policy\": \"lite\" }, \"user_input\": \"请先搜索 docs 目录中与 Memory 最相关的文件名或内容片段，再读取最相关的结果并总结。\", \"system_prompt_path\": \"../prompts/local_tool_agent.txt\", \"selected_memory_ids\": [], \"use_global_memory\": false, \"toolse...",
+            "line_number": 10,
+            "match_count": 9,
+            "match_type": "token"
+          },
+          {
+            "path": "messages/eval_cases_life_rent.json",
+            "score": 48.411,
+            "snippet": "[ { \"id\": \"life_rent_multi_file_compare\", \"title\": \"租房多文件对比\", \"category\": \"life_rent\", \"user_input\": \"请同时阅读 docs/life_rent/requirements.md、docs/life_rent/listing_a.md、docs/life_rent/listing_b.md、docs...",
+            "line_number": 4,
+            "match_count": 8,
+            "match_type": "token"
+          },
+          {
+            "path": "messages/eval_cases_feature5.json",
+            "score": 44.334,
+            "snippet": "...\"] }, { \"id\": \"planning_like_001\", \"title\": \"规划倾向任务\", \"category\": \"planning_like\", \"user_input\": \"请先搜索 docs 目录中和 tool calling 最相关的文件，再读取最相关的结果并总结关键结论。\", \"expected_tools\": [\"local_file_search\", \"file_reader\"], \"expected_match_type\": \"contains\" }, { \"id\": \"table_tool_...",
+            "line_number": 34,
+            "match_count": 7,
+            "match_type": "token"
+          },
+          {
+            "path": "runtime_input_3.json",
+            "score": 43.282,
+            "snippet": "{ \"conversation_id\": \"conv_003\", \"user_input\": \"请调用 local_file_search Skill 在 docs 目录搜索“检索演示 工具编排”，返回最相关文件路径和一句中文摘要。\", \"system_prompt_path\": \"../prompts/local_tool_agent.txt\", \"selected_memory_ids\": [], \"use_global_memory\": false, \"toolset\": \"basic...",
+            "line_number": 3,
+            "match_count": 6,
+            "match_type": "token"
+          },
+          {
+            "path": "runtime_input_adaptive_execute.json",
+            "score": 30.715,
+            "snippet": "..., \"evidence_policy\": \"lite\", \"low_mode\": \"native_tools\", \"high_mode\": \"prompt_json\" }, \"user_input\": \"请先搜索 docs 目录中与 tool calling 最相关的文件，再读取最相关的 1~2 个文件，并用三条中文要点总结关键结论。\", \"system_prompt_path\": \"../prompts/local_tool_agent.txt\", \"selected_memory_ids\": [], \"use_global_memory\": fals...",
+            "line_number": 11,
+            "match_count": 5,
+            "match_type": "token"
+          }
+        ]
+      },
+      "error": null,
+      "latency_ms": 9.526
+    }
+  }
+}

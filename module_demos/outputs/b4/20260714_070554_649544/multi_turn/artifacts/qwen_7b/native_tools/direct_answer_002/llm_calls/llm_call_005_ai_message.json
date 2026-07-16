@@ -1,0 +1,13 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "local_file_search",
+      "args": {
+        "query": "Plan-and-Execute ReAct 区别"
+      }
+    }
+  ]
+}

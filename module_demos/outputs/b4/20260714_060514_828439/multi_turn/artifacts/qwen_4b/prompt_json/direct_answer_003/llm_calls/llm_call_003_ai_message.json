@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:2:提升可信度与可解释性，使Agent的决策过程透明、可追溯，便于人类审计和调试。",
+  "tool_calls": []
+}

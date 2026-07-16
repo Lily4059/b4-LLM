@@ -1,0 +1,19 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "local_file_search",
+      "args": {
+        "query": "THIS_FILE_SHOULD_NOT_EXIST_12345",
+        "root_dir": "docs",
+        "file_types": [
+          "txt",
+          "md"
+        ],
+        "top_k": 5
+      }
+    }
+  ]
+}

@@ -1,0 +1,21 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "calculator",
+      "args": {
+        "expression": "3"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/agent_intro.txt",
+        "max_chars": 92
+      }
+    }
+  ]
+}

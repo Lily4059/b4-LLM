@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:1: 计算完成，结果为 3130.0",
+  "tool_calls": []
+}

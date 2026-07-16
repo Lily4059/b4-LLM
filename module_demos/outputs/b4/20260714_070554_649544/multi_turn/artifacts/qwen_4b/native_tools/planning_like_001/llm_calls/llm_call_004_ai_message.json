@@ -1,0 +1,34 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md"
+      }
+    },
+    {
+      "id": "call_003",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md"
+      }
+    },
+    {
+      "id": "call_004",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md"
+      }
+    }
+  ]
+}

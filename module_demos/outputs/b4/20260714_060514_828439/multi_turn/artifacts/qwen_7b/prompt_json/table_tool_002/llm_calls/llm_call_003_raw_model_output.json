@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"STEP_DONE:1:列结构为：task, score, latency。预览内容如下：{'task': 'read_file', 'score': '92', 'latency': '15.2'}；{'task': 'calculate', 'score': '98', 'latency': '3.1'}；{'task': 'search', 'score': '88', 'latency': '20.5'}。分数的统计信息：平均值约为92.7，最小值为88，最大值为98。延迟的统计信息：平均值约为12.9，最小值为3.1，最大值为20.5。\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "STEP_DONE:1:列结构为：task, score, latency。预览内容如下：{'task': 'read_file', 'score': '92', 'latency': '15.2'}；{'task': 'calculate', 'score': '98', 'latency': '3.1'}；{'task': 'search', 'score': '88', 'latency': '20.5'}。分数的统计信息：平均值约为92.7，最小值为88，最大值为98。延迟的统计信息：平均值约为12.9，最小值为3.1，最大值为20.5。",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"STEP_DONE:1:列结构为：task, score, latency。预览内容如下：{'task': 'read_file', 'score': '92', 'latency': '15.2'}；{'task': 'calculate', 'score': '98', 'latency': '3.1'}；{'task': 'search', 'score': '88', 'latency': '20.5'}。分数的统计信息：平均值约为92.7，最小值为88，最大值为98。延迟的统计信息：平均值约为12.9，最小值为3.1，最大值为20.5。\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 2657,
+        "output_tokens": 154,
+        "elapsed_seconds": 37.477
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T06:47:44+08:00",
+  "usage": {
+    "input_tokens": 2657,
+    "output_tokens": 154,
+    "elapsed_seconds": 37.477
+  }
+}

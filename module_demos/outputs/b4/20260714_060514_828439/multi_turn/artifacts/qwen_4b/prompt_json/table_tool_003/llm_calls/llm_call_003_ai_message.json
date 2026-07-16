@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:1:已完成表格分析，获取到3行数据，包含task、score、latency三列",
+  "tool_calls": []
+}

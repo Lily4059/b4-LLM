@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"plan\":[\"CallCheck_user\"]}",
+  "tool_calls": []
+}

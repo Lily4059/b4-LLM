@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.9,
+  "reason": "搜索与Agent系统组成相关的文件并通过文件_reader工具读取文件内容进行对比总结通常只需要一轮工具调用即可完成。",
+  "llm_status": "success",
+  "llm_error": null
+}

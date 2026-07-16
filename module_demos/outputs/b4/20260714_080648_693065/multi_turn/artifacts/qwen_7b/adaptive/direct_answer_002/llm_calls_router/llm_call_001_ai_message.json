@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "ReAct 是在执行后检查和反思，Plan-and-Execute 先制定计划再执行。ReAct 的复杂度通常较低，因为它是基于反馈调整的迭代过程；而 Plan-and-Execute 的复杂度可能较高，因为它依赖于初始计划的准确性。",
+  "tool_calls": []
+}

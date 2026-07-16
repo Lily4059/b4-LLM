@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "[\"读取docs/tool_calling.md文件\",\"提炼两条可以直接转化为工程约束的规则\"]",
+  "tool_calls": []
+}

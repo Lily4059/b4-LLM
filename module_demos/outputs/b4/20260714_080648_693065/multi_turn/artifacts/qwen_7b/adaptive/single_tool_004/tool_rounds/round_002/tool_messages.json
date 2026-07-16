@@ -1,0 +1,9 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "file_reader",
+    "content": "{\"skill_name\":\"file_reader\",\"status\":\"success\",\"input\":{\"path\":\"docs/tool_calling.md\",\"max_chars\":1000},\"output\":{\"content\":\"# Tool Calling\\n\\n模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。\\n\",\"num_chars\":53,\"source\":\"docs/tool_calling.md\",\"truncated\":false},\"error\":null,\"latency_ms\":0.452}",
+    "status": "success"
+  }
+]

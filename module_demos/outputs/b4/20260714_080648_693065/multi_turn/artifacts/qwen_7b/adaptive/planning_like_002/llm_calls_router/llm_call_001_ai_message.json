@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"low\",\"confidence\":0.9,\"reason\":\"搜索与Memory相关的文件后，直接读取文件并总结，属于单步任务。\"}",
+  "tool_calls": []
+}

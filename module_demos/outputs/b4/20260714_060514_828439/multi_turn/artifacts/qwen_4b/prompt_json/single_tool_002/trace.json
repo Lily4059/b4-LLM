@@ -1,0 +1,58 @@
+{
+  "status": "success",
+  "tool_rounds_used": 0,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "步骤1：计算 23*17+9 的结果",
+        "status": "completed",
+        "summary": "Fast Path：单步任务且不需要外部工具证据，直接完成。",
+        "error": ""
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "步骤1：计算 23*17+9 的结果",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "finish",
+      "ai_message": {
+        "role": "assistant",
+        "content": "23*17+9 = 391",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "步骤1：计算 23*17+9 的结果",
+            "status": "completed",
+            "summary": "Fast Path：单步任务且不需要外部工具证据，直接完成。",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": null
+}

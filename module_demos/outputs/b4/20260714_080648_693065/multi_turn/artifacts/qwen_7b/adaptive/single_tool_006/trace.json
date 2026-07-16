@@ -1,0 +1,65 @@
+{
+  "status": "success",
+  "tool_rounds_used": 1,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "react_one_round",
+    "steps": []
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "react",
+      "ai_message": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_001",
+            "name": "calculator",
+            "args": {
+              "expression": "(1024/8+37)*19-5"
+            }
+          }
+        ]
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [
+        {
+          "role": "tool",
+          "tool_call_id": "call_001",
+          "name": "calculator",
+          "content": "{\"skill_name\": \"calculator\", \"status\": \"success\", \"input\": {\"expression\": \"(1024/8+37)*19-5\"}, \"output\": {\"result\": 3130.0}, \"error\": null, \"latency_ms\": 0.347}",
+          "status": "success"
+        }
+      ],
+      "tool_messages_compression": {
+        "enabled": true,
+        "compressed_messages": 0
+      },
+      "tool_round_dir": "/root/siton-tmp/assignment_B/agent/module_demos/outputs/b4/20260714_080648_693065/multi_turn/artifacts/qwen_7b/adaptive/single_tool_006/tool_rounds/round_001"
+    },
+    {
+      "turn_index": 2,
+      "phase": "react",
+      "ai_message": {
+        "role": "assistant",
+        "content": "计算结果为 3130。",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": []
+    }
+  ],
+  "error": null,
+  "adaptive": {
+    "strategy": "react_one_round",
+    "complexity": "low",
+    "confidence": 0.95,
+    "reason": "任务是可由计算器单轮完成的算术表达式。",
+    "llm_status": "success",
+    "llm_error": null
+  }
+}

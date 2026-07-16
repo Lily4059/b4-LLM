@@ -1,0 +1,9 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "calculator",
+    "content": "{\"skill_name\":\"calculator\",\"status\":\"success\",\"input\":{\"expression\":\"92\"},\"output\":{\"result\":92},\"error\":null,\"latency_ms\":0.266}",
+    "status": "success"
+  }
+]

@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:1:证据约束要求Agent在推理或决策时，必须显式引用支持其结论的证据来源，而非仅凭直觉或假设。",
+  "tool_calls": []
+}

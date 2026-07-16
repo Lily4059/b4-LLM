@@ -1,0 +1,9 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "local_file_search",
+    "content": "{\"skill_name\":\"local_file_search\",\"status\":\"error\",\"input\":{},\"output\":null,\"error\":{\"type\":\"ToolArgumentError\",\"code\":\"TOOL_ARGUMENT_ERROR\",\"category\":\"invalid_input\",\"message\":\"missing required parameters: query\",\"retryable\":false,\"details\":{\"missing\":[\"query\"]}},\"latency_ms\":0.044}",
+    "status": "error"
+  }
+]

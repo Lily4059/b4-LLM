@@ -1,0 +1,62 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"ReAct 是在执行后评估和调整，Plan-and-Execute 是先规划再执行。{\"plan\":[\"生成执行计划\",\"执行计划\"]}\",\"tool_calls\":[]}",
+  "parsed_candidate": null,
+  "status": "error",
+  "error": {
+    "type": "ValueError",
+    "message": "tool call missing keys: name"
+  },
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"ReAct 是在执行后评估和调整，Plan-and-Execute 是先规划再执行。{\"plan\":[\"收集相关信息\",\"分析信息制定策略\",\"执行策略\",\"评估结果并调整\"]}\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 1576,
+        "output_tokens": 48,
+        "elapsed_seconds": 11.8377
+      },
+      "error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: name"
+      }
+    },
+    {
+      "attempt_index": 2,
+      "raw_text": "{\"content\":\"ReAct 是在执行后评估和调整，Plan-and-Execute 是先规划再执行。{\"plan\":[\"生成执行计划\",\"执行计划\",\"评估结果\",\"根据评估调整计划\"]}\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 1839,
+        "output_tokens": 47,
+        "elapsed_seconds": 12.1728
+      },
+      "error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: name"
+      }
+    },
+    {
+      "attempt_index": 3,
+      "raw_text": "{\"content\":\"ReAct 是在执行后评估和调整，Plan-and-Execute 是先规划再执行。{\"plan\":[\"生成执行计划\",\"执行计划\"]}\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 1838,
+        "output_tokens": 39,
+        "elapsed_seconds": 10.0839
+      },
+      "error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: name"
+      }
+    }
+  ],
+  "repair_attempted": true,
+  "generated_at": "2026-07-14T06:23:07+08:00",
+  "usage": {
+    "input_tokens": 5253,
+    "output_tokens": 134,
+    "elapsed_seconds": 34.0944
+  }
+}

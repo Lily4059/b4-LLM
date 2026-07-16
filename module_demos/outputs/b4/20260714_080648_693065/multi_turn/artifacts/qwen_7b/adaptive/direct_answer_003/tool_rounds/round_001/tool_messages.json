@@ -1,0 +1,9 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "local_file_search",
+    "content": "{\"skill_name\":\"local_file_search\",\"status\":\"success\",\"input\":{\"query\":\"evidence constraint\",\"root_dir\":\".\",\"file_types\":[\"txt\",\"md\"]},\"output\":{\"query\":\"evidence constraint\",\"root_dir\":\".\",\"files_scanned\":11,\"total_matches\":0,\"truncated_files\":0,\"skipped_files\":0,\"results\":[]},\"error\":null,\"latency_ms\":3.888}",
+    "status": "success"
+  }
+]

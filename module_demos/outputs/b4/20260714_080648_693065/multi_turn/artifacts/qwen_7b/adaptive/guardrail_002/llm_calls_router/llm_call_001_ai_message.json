@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "不存在，通过检查文件系统确认。",
+  "tool_calls": []
+}

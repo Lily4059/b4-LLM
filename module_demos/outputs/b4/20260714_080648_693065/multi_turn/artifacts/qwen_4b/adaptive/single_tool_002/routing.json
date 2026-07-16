@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.95,
+  "reason": "任务是可由计算器单轮完成的算术表达式。",
+  "llm_status": "success",
+  "llm_error": null
+}

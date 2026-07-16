@@ -1,0 +1,32 @@
+{
+  "mode": "native_tools",
+  "effective_mode": "native_tools",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"plan\":[\"CallCheck_user\"]}",
+  "parsed_candidate": {
+    "content": "{\"plan\":[\"CallCheck_user\"]}",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"plan\":[\"CallCheck_user\"]}",
+      "usage": {
+        "input_tokens": 1444,
+        "output_tokens": 7,
+        "elapsed_seconds": 1.741
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T08:04:47+08:00",
+  "usage": {
+    "input_tokens": 1444,
+    "output_tokens": 7,
+    "elapsed_seconds": 1.741
+  }
+}

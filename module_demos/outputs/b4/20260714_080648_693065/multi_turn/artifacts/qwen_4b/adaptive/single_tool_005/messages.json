@@ -1,0 +1,39 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: file_reader. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请读取 docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt，如果文件不存在请说明原因并给出你能做的替代方案。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "file_reader",
+        "args": {
+          "path": "docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "file_reader",
+    "content": "{\"skill_name\": \"file_reader\", \"status\": \"error\", \"input\": {\"path\": \"docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt\"}, \"output\": null, \"error\": {\"type\": \"FileNotFoundError\", \"code\": \"RESOURCE_NOT_FOUND\", \"category\": \"resource_not_found\", \"message\": \"file not found: docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt\", \"retryable\": false, \"details\": {}}, \"latency_ms\": 0.339}",
+    "status": "error"
+  },
+  {
+    "role": "user",
+    "content": "已获得本轮工具结果。请基于最新证据继续决策：如果信息已足够，就直接输出最终回答；如果仍缺关键证据，也可以继续请求下一轮工具；但优先利用现有证据收敛，不要重复已经成功返回的相同调用。"
+  },
+  {
+    "role": "assistant",
+    "content": "文件 `docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt` 不存在。\n\n**原因：**\n根据工具返回的错误信息，系统明确提示 `file not found: docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt`，这是一个资源未找到的错误。\n\n**替代方案：**\n1. **检查文件名**：请确认文件名是否正确，是否存在拼写错误。\n2. **检查文件位置**：请确认文件是否位于 `docs` 目录下，或者是否在其他目录中。\n3. **搜索文件**：如果您知道文件内容或名称的一部分，我可以使用 `local_file_search` 工具在本地文件中搜索该文件。\n4. **提供正确路径**：如果您知道文件的正确路径，请提供给我，我可以尝试读取。",
+    "tool_calls": []
+  }
+]

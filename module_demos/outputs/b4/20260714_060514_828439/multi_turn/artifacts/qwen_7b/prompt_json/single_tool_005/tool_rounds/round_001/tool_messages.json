@@ -1,0 +1,9 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "local_file_search",
+    "content": "{\"skill_name\":\"local_file_search\",\"status\":\"success\",\"input\":{\"query\":\"THIS_FILE_SHOULD_NOT_EXIST_12345.txt\",\"root_dir\":\"docs\",\"file_types\":[\"txt\"]},\"output\":{\"query\":\"THIS_FILE_SHOULD_NOT_EXIST_12345.txt\",\"root_dir\":\"docs\",\"files_scanned\":1,\"total_matches\":1,\"truncated_files\":0,\"skipped_files\":0,\"results\":[{\"path\":\"docs/agent_intro.txt\",\"score\":5.0,\"snippet\":\"docs/agent_intro.txt\",\"line_number\":null,\"match_count\":1,\"match_type\":\"token\"}]},\"error\":null,\"latency_ms\":0.716}",
+    "status": "success"
+  }
+]

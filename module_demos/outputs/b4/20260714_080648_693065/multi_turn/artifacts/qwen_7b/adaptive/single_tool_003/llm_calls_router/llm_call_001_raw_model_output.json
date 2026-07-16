@@ -1,0 +1,32 @@
+{
+  "mode": "prompt_json",
+  "effective_mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_7b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen2.5-7B",
+  "raw_text": "{\"content\":\"{\\\"complexity\\\":\\\"low\\\",\\\"confidence\\\":1.0,\\\"reason\\\":\\\"直接从文件中读取所需信息，无需额外推理或多轮交互。\\\"}\",\"tool_calls\":[]}",
+  "parsed_candidate": {
+    "content": "{\"complexity\":\"low\",\"confidence\":1.0,\"reason\":\"直接从文件中读取所需信息，无需额外推理或多轮交互。\"}",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"{\\\"complexity\\\":\\\"low\\\",\\\"confidence\\\":1.0,\\\"reason\\\":\\\"直接从文件中读取所需信息，无需额外推理或多轮交互。\\\"}\",\"tool_calls\":[]}",
+      "usage": {
+        "input_tokens": 716,
+        "output_tokens": 42,
+        "elapsed_seconds": 9.5779
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-14T08:22:37+08:00",
+  "usage": {
+    "input_tokens": 716,
+    "output_tokens": 42,
+    "elapsed_seconds": 9.5779
+  }
+}

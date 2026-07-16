@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "步骤1：计算 23*17+9 的结果",
+  "tool_calls": []
+}

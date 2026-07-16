@@ -1,0 +1,14 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/search_skill_demo.md",
+        "max_chars": 1000
+      }
+    }
+  ]
+}

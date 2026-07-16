@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"low\",\"confidence\":0.9,\"reason\":\"单轮工具调用即可完成任务\"}",
+  "tool_calls": []
+}

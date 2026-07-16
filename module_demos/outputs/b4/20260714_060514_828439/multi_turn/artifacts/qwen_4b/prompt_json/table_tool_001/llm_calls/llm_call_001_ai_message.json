@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "分析 tables/results.csv 的列结构和预览内容。",
+  "tool_calls": []
+}
