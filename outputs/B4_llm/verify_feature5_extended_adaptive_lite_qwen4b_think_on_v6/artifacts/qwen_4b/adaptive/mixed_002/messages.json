@@ -1,0 +1,47 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: file_reader. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请先读取 docs/tool_calling.md，然后提炼两条可以直接转化为工程约束的规则。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "file_reader",
+        "args": {
+          "path": "docs/tool_calling.md"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "file_reader",
+    "content": "{\"skill_name\": \"file_reader\", \"status\": \"success\", \"input\": {\"path\": \"docs/tool_calling.md\"}, \"output\": {\"content\": \"# Tool Calling\\n\\n模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。\\n\", \"num_chars\": 53, \"source\": \"docs/tool_calling.md\", \"truncated\": false}, \"error\": null, \"latency_ms\": 0.355}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "已获得本轮工具结果。请基于最新证据继续决策：如果信息已足够，就直接输出最终回答；如果仍缺关键证据，也可以继续请求下一轮工具。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "file_reader",
+        "args": {
+          "path": "docs/tool_calling.md"
+        }
+      }
+    ]
+  }
+]

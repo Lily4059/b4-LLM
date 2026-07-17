@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.9,
+  "reason": "分析CSV文件的列结构和预览内容通常只需要一轮使用table_analyzer工具即可完成。",
+  "llm_status": "success",
+  "llm_error": null
+}

@@ -1,0 +1,22 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "local_file_search",
+      "args": {
+        "query": "tool calling",
+        "path": "docs"
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md",
+        "max_chars": 2000
+      }
+    }
+  ]
+}

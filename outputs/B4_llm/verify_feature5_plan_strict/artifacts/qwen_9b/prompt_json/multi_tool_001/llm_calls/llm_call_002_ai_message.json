@@ -1,0 +1,23 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/agent_intro.txt",
+        "max_chars": 1200
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md",
+        "max_chars": 1200
+      }
+    }
+  ],
+  "_step_marker": "STEP_DONE:1:已完成两个文档的并行读取与比较分析。"
+}

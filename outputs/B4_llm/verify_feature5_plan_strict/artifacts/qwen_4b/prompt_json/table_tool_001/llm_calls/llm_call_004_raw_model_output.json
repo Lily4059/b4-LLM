@@ -1,0 +1,31 @@
+{
+  "mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_4b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+  "raw_text": "{\"content\":\"表格文件 tables/results.csv 包含 3 行数据和 3 列，列结构如下：\\n\\n1. **task**：任务类型，包含三个任务：read_file、calculate、search\\n2. **score**：任务得分，数值范围 88-98，平均分为 92.67\\n3. **latency**：延迟时间（秒），数值范围 3.1-20.5，平均延迟为 12.93 秒\\n\\n预览数据：\\n- read_file: score=92, latency=15.2s\\n- calculate: score=98, latency=3.1s\\n- search: score=88, latency=20.5s\\n\\n统计特征：calculate 任务得分最高但延迟最低，search 任务得分最低且延迟最高。\",\"tool_calls\":[]}\n",
+  "parsed_candidate": {
+    "content": "表格文件 tables/results.csv 包含 3 行数据和 3 列，列结构如下：\n\n1. **task**：任务类型，包含三个任务：read_file、calculate、search\n2. **score**：任务得分，数值范围 88-98，平均分为 92.67\n3. **latency**：延迟时间（秒），数值范围 3.1-20.5，平均延迟为 12.93 秒\n\n预览数据：\n- read_file: score=92, latency=15.2s\n- calculate: score=98, latency=3.1s\n- search: score=88, latency=20.5s\n\n统计特征：calculate 任务得分最高但延迟最低，search 任务得分最低且延迟最高。",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"表格文件 tables/results.csv 包含 3 行数据和 3 列，列结构如下：\\n\\n1. **task**：任务类型，包含三个任务：read_file、calculate、search\\n2. **score**：任务得分，数值范围 88-98，平均分为 92.67\\n3. **latency**：延迟时间（秒），数值范围 3.1-20.5，平均延迟为 12.93 秒\\n\\n预览数据：\\n- read_file: score=92, latency=15.2s\\n- calculate: score=98, latency=3.1s\\n- search: score=88, latency=20.5s\\n\\n统计特征：calculate 任务得分最高但延迟最低，search 任务得分最低且延迟最高。\",\"tool_calls\":[]}\n",
+      "usage": {
+        "input_tokens": 2240,
+        "output_tokens": 194,
+        "elapsed_seconds": 15.375
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-08T20:32:06+08:00",
+  "usage": {
+    "input_tokens": 2240,
+    "output_tokens": 194,
+    "elapsed_seconds": 15.375
+  }
+}

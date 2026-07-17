@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"low\",\"confidence\":1.0,\"reason\":\"This is a knowledge-based question that can be answered directly without any tool calls.\"}",
+  "tool_calls": []
+}

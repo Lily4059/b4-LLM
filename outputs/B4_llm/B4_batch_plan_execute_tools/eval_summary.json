@@ -1,0 +1,58 @@
+{
+  "cases_path": "/root/siton-tmp/assignment_B/agent/data/messages/eval_cases_feature5.json",
+  "profiles": [
+    "qwen_4b",
+    "qwen_9b"
+  ],
+  "modes": [
+    "prompt_json",
+    "native_tools"
+  ],
+  "profile_targets": {
+    "qwen_4b": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+    "qwen_9b": "/root/siton-tmp/assignment_B/Qwen3.5-4B"
+  },
+  "summary": {
+    "qwen_4b::prompt_json": {
+      "cases": 6,
+      "success_rate": 0.5,
+      "structured_output_rate": 0.8333,
+      "tool_match_rate": 0.6667,
+      "args_complete_rate": 1.0,
+      "avg_input_tokens": 22077.17,
+      "avg_output_tokens": 525.67,
+      "avg_elapsed_seconds": 58.2295
+    },
+    "qwen_4b::native_tools": {
+      "cases": 6,
+      "success_rate": 0.1667,
+      "structured_output_rate": 1.0,
+      "tool_match_rate": 0.1667,
+      "args_complete_rate": 0.6667,
+      "avg_input_tokens": 19774.0,
+      "avg_output_tokens": 409.17,
+      "avg_elapsed_seconds": 49.3732
+    },
+    "qwen_9b::prompt_json": {
+      "cases": 6,
+      "success_rate": 0.5,
+      "structured_output_rate": 0.8333,
+      "tool_match_rate": 0.6667,
+      "args_complete_rate": 1.0,
+      "avg_input_tokens": 22079.33,
+      "avg_output_tokens": 532.0,
+      "avg_elapsed_seconds": 55.5718
+    },
+    "qwen_9b::native_tools": {
+      "cases": 6,
+      "success_rate": 0.1667,
+      "structured_output_rate": 1.0,
+      "tool_match_rate": 0.1667,
+      "args_complete_rate": 0.6667,
+      "avg_input_tokens": 19772.5,
+      "avg_output_tokens": 402.5,
+      "avg_elapsed_seconds": 42.7697
+    }
+  },
+  "evaluation_mode": "plan_execute"
+}

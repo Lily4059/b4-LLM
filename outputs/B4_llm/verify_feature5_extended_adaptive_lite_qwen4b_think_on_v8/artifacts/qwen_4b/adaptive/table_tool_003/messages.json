@@ -1,0 +1,41 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: table_analyzer. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请对 tables/results.csv 进行列结构分析，并描述每列的含义（如果无法从数据推断请说明不确定性）。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "table_analyzer",
+        "args": {
+          "path": "tables/results.csv",
+          "describe": true,
+          "max_rows_preview": 10
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "table_analyzer",
+    "content": "{\"skill_name\": \"table_analyzer\", \"status\": \"success\", \"input\": {\"path\": \"tables/results.csv\", \"describe\": true, \"max_rows_preview\": 10}, \"output\": {\"path\": \"tables/results.csv\", \"num_rows\": 3, \"num_columns\": 3, \"columns\": [\"task\", \"score\", \"latency\"], \"preview\": [{\"task\": \"read_file\", \"score\": \"92\", \"latency\": \"15.2\"}, {\"task\": \"calculate\", \"score\": \"98\", \"latency\": \"3.1\"}, {\"task\": \"search\", \"score\": \"88\", \"latency\": \"20.5\"}], \"describe\": {\"score\": {\"count\": 3, \"min\": 88.0, \"max\": 98.0, \"mean\": 92.66666666666667}, \"latency\": {\"count\": 3, \"min\": 3.1, \"max\": 20.5, \"mean\": 12.933333333333332}}, \"original_preview_rows\": 3, \"compressed\": false}, \"error\": null, \"latency_ms\": 0.537}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "已获得本轮工具结果。请基于最新证据继续决策：如果信息已足够，就直接输出最终回答；如果仍缺关键证据，也可以继续请求下一轮工具；但优先利用现有证据收敛，不要重复已经成功返回的相同调用。"
+  },
+  {
+    "role": "assistant",
+    "content": "根据工具返回的结果，`tables/results.csv` 包含3列数据：\n\n1. **task**：任务名称，表示不同的功能任务类型（如 read_file、calculate、search）\n2. **score**：任务得分，数值范围在88-98之间，表示任务完成的质量或准确性\n3. **latency**：延迟时间，数值范围在3.1-20.5之间，单位可能是秒，表示任务执行耗时\n\n从数据预览可以看出，该表记录了3个不同任务的执行结果，包含任务类型、得分和延迟三个维度。",
+    "tool_calls": []
+  }
+]

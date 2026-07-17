@@ -1,0 +1,48 @@
+{
+  "8ceaa30f043d45cddd543514af5d18f366cb1b032d70cf150d7e00f89d0e6043": {
+    "name": "local_file_search",
+    "args": {
+      "query": "tool calling",
+      "root_dir": "docs",
+      "file_types": [
+        "txt",
+        "md"
+      ],
+      "top_k": 1
+    },
+    "created_at": "2026-07-09T09:31:34+08:00",
+    "skill_result": {
+      "skill_name": "local_file_search",
+      "status": "success",
+      "input": {
+        "query": "tool calling",
+        "root_dir": "docs",
+        "file_types": [
+          "txt",
+          "md"
+        ],
+        "top_k": 1
+      },
+      "output": {
+        "query": "tool calling",
+        "root_dir": "docs",
+        "files_scanned": 3,
+        "total_matches": 2,
+        "truncated_files": 0,
+        "skipped_files": 0,
+        "results": [
+          {
+            "path": "docs/tool_calling.md",
+            "score": 30.0,
+            "snippet": "# Tool Calling 模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。",
+            "line_number": 1,
+            "match_count": 5,
+            "match_type": "exact"
+          }
+        ]
+      },
+      "error": null,
+      "latency_ms": 0.824
+    }
+  }
+}

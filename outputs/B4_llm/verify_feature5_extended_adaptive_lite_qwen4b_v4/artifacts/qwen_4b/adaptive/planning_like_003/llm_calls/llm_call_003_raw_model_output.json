@@ -1,0 +1,48 @@
+{
+  "mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_4b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+  "raw_text": "{\"content\":\"\",\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"query\":\"Agent 系统组成\",\"root_dir\":\"docs\",\"file_types\":[\"txt\",\"md\"],\"top_k\":10}]}\n",
+  "parsed_candidate": null,
+  "status": "error",
+  "error": {
+    "type": "ValueError",
+    "message": "tool call missing keys: args"
+  },
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"\",\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"query\":\"Agent 系统组成\",\"root_dir\":\"docs\",\"file_types\":[\"txt\",\"md\"],\"top_k\":10}]}\n",
+      "usage": {
+        "input_tokens": 2525,
+        "output_tokens": 49,
+        "elapsed_seconds": 5.3287
+      },
+      "error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: args"
+      }
+    },
+    {
+      "attempt_index": 2,
+      "raw_text": "{\"content\":\"\",\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"query\":\"Agent 系统组成\",\"root_dir\":\"docs\",\"file_types\":[\"txt\",\"md\"],\"top_k\":10}]}\n",
+      "usage": {
+        "input_tokens": 2755,
+        "output_tokens": 49,
+        "elapsed_seconds": 5.368
+      },
+      "error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: args"
+      }
+    }
+  ],
+  "repair_attempted": true,
+  "generated_at": "2026-07-09T15:48:24+08:00",
+  "usage": {
+    "input_tokens": 5280,
+    "output_tokens": 98,
+    "elapsed_seconds": 10.6967
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "计算结果已获取：23×17+9 = 400。\n\n最终答案：**400**",
+  "tool_calls": []
+}

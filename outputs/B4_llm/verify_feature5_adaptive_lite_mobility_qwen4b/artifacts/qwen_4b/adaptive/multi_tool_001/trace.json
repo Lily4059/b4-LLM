@@ -1,0 +1,83 @@
+{
+  "status": "success",
+  "tool_rounds_used": 0,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "请同时阅读 docs/agent_intro.txt 和 docs/tool_calling.md，比较两个文档的关注点差异。如果需要工具，请在同一轮并行请求。",
+        "status": "completed",
+        "summary": "Fast Path：单步任务且不需要外部工具证据，直接完成。",
+        "error": ""
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_001",
+            "name": "file_reader",
+            "args": {
+              "path": "docs/agent_intro.txt",
+              "max_chars": 1200
+            }
+          },
+          {
+            "id": "call_002",
+            "name": "file_reader",
+            "args": {
+              "path": "docs/tool_calling.md",
+              "max_chars": 1200
+            }
+          }
+        ]
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "finish",
+      "ai_message": {
+        "role": "assistant",
+        "content": "STEP_DONE:1:已完成两个文档的关注点差异比较。",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请同时阅读 docs/agent_intro.txt 和 docs/tool_calling.md，比较两个文档的关注点差异。如果需要工具，请在同一轮并行请求。",
+            "status": "completed",
+            "summary": "Fast Path：单步任务且不需要外部工具证据，直接完成。",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": null,
+  "adaptive": {
+    "strategy": "plan_execute",
+    "complexity": "high",
+    "confidence": 0.7,
+    "reason": "任务包含检索、比较或明显的多步依赖。",
+    "llm_status": "success",
+    "llm_error": null
+  }
+}

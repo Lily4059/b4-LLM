@@ -1,0 +1,9 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "file_reader",
+    "content": "{\"skill_name\":\"file_reader\",\"status\":\"error\",\"input\":{\"path\":\"docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt\"},\"output\":null,\"error\":{\"type\":\"FileNotFoundError\",\"code\":\"RESOURCE_NOT_FOUND\",\"category\":\"resource_not_found\",\"message\":\"file not found: docs/THIS_FILE_SHOULD_NOT_EXIST_12345.txt\",\"retryable\":false,\"details\":{}},\"latency_ms\":0.438}",
+    "status": "error"
+  }
+]

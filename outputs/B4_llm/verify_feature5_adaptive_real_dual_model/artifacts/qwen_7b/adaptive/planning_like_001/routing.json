@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.9,
+  "reason": "搜索和读取相关文件并总结结论通常只需要一轮工具调用即可完成。",
+  "llm_status": "success",
+  "llm_error": null
+}

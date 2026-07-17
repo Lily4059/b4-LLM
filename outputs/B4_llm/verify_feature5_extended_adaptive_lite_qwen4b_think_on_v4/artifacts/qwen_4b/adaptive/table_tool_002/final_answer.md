@@ -1,0 +1,1 @@
+results.csv 包含3列：task、score、latency。共有3行数据，分别对应 read_file、calculate、search 三种任务。score 范围 88-98，平均约92.7；latency 范围 3.1-20.5 毫秒，平均约12.9 毫秒。

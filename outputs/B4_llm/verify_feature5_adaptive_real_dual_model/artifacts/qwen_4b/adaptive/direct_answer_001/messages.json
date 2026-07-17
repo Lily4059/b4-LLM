@@ -1,0 +1,15 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. Use available tools when needed."
+  },
+  {
+    "role": "user",
+    "content": "请用一句中文解释什么是 tool calling。"
+  },
+  {
+    "role": "assistant",
+    "content": "Tool calling 是指人工智能模型在需要执行特定任务时，通过调用外部工具（如计算器、文件读取器等）来获取信息或完成操作的能力。",
+    "tool_calls": []
+  }
+]

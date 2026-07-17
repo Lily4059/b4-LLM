@@ -1,0 +1,83 @@
+{
+  "status": "llm_parse_error",
+  "tool_rounds_used": 0,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "请先搜索 docs 目录中与 Memory 最相关的文件名或内容片段，再读取最相关的结果并总结。",
+        "status": "pending",
+        "summary": "",
+        "error": ""
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "tool_calls": []
+      },
+      "llm_status": "error",
+      "llm_error": {
+        "type": "ValueError",
+        "message": "tool_calls list must not be empty"
+      },
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "execute",
+      "ai_message": {
+        "role": "assistant",
+        "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "tool_calls": []
+      },
+      "llm_status": "error",
+      "llm_error": {
+        "type": "ValueError",
+        "message": "tool call must be an object"
+      },
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请先搜索 docs 目录中与 Memory 最相关的文件名或内容片段，再读取最相关的结果并总结。",
+            "status": "pending",
+            "summary": "",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": {
+    "type": "LLMParseError",
+    "message": "B4 failed to parse the model output as a valid AIMessage JSON object.",
+    "llm_call_index": 2,
+    "cause": {
+      "type": "ValueError",
+      "message": "tool call must be an object"
+    }
+  },
+  "adaptive": {
+    "strategy": "plan_execute",
+    "complexity": "high",
+    "confidence": 0.7,
+    "reason": "routing classifier did not return a valid AIMessage; fallback to heuristic. 任务包含检索、比较或明显的多步依赖。",
+    "llm_status": "error",
+    "llm_error": {
+      "type": "ValueError",
+      "message": "tool_calls list must not be empty"
+    }
+  }
+}

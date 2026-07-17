@@ -1,0 +1,86 @@
+{
+  "status": "llm_parse_error",
+  "tool_rounds_used": 0,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "请检查 docs/agent_intro.txt 是否存在，如果存在请回答“存在”，如果不存在请回答“不存在”。",
+        "status": "pending",
+        "summary": "",
+        "error": ""
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "",
+        "tool_calls": [
+          {
+            "id": "call_001",
+            "name": "file_reader",
+            "args": {
+              "path": "docs/agent_intro.txt",
+              "max_chars": 1200
+            }
+          }
+        ]
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "execute",
+      "ai_message": {
+        "role": "assistant",
+        "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "tool_calls": []
+      },
+      "llm_status": "error",
+      "llm_error": {
+        "type": "JSONDecodeError",
+        "message": "Expecting value: line 1 column 1 (char 0)"
+      },
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请检查 docs/agent_intro.txt 是否存在，如果存在请回答“存在”，如果不存在请回答“不存在”。",
+            "status": "pending",
+            "summary": "",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": {
+    "type": "LLMParseError",
+    "message": "B4 failed to parse the model output as a valid AIMessage JSON object.",
+    "llm_call_index": 2,
+    "cause": {
+      "type": "JSONDecodeError",
+      "message": "Expecting value: line 1 column 1 (char 0)"
+    }
+  },
+  "adaptive": {
+    "strategy": "plan_execute",
+    "complexity": "high",
+    "confidence": 0.55,
+    "reason": "routing classifier unexpectedly requested tool_calls; fallback to heuristic. 启发式未能确认其为单步任务，保守回退到 plan_execute。",
+    "llm_status": "success",
+    "llm_error": null
+  }
+}

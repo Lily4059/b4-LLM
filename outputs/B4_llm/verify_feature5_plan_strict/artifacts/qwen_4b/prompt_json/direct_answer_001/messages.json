@@ -1,0 +1,24 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. Use available tools when needed."
+  },
+  {
+    "role": "user",
+    "content": "请用一句中文解释什么是 tool calling。"
+  },
+  {
+    "role": "assistant",
+    "content": "Tool calling 是指智能体在完成任务时，通过调用外部工具（如计算器、文件读取等）来获取信息或执行操作的能力。",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "你正在以 Plan-and-Execute 模式工作。\n先严格按计划逐步执行，再给最终回答。\n\n<plan_state>\n{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"请用一句中文解释什么是 tool calling。\", \"status\": \"completed\", \"summary\": \"Fast Path：单步任务且不需要外部工具证据，直接完成。\", \"error\": \"\"}], \"evidence_policy\": \"strict\"}\n</plan_state>\n\n执行规则：\n- 如果需要调用工具：必须输出 schema B，且 content 必须是空字符串。\n- 当前步骤不需要工具且你已完成：输出 schema A，content 以 STEP_DONE:<step_number>:<summary> 开头。\n- 如果步骤失败且需要回退/重试：输出 schema A 且 content 以 STEP_FAIL:<step_number>:<reason> 开头。\n- 对于文件/表格缺失类失败：在输出 STEP_FAIL 之前，优先尝试一次最小修复重试（例如修正路径/目录前缀），或用 ASK_USER 让用户确认文件位置。\n- 若遇到关键歧义/需要用户确认：输出 schema A，content 以 ASK_USER:<question> 开头，并在后续行提供可选项（用短列表）。\n- 当有多个可行方案时：列出方案 A/B/C 的权衡点，并给出推荐及理由（多目标权衡）。\n- 只有当所有步骤 status 都变为 completed 后，才输出最终回答（schema A，content 为正常回答文本，不要以 STEP_DONE/STEP_FAIL 开头）。\n\n该任务计划步数≤1，且不需要外部工具证据。请直接输出最终回答（schema A），不要调用任何工具。"
+  },
+  {
+    "role": "assistant",
+    "content": "Tool calling 是指智能体在完成任务时，通过调用外部工具（如计算器、文件读取等）来获取信息或执行操作的能力。",
+    "tool_calls": []
+  }
+]

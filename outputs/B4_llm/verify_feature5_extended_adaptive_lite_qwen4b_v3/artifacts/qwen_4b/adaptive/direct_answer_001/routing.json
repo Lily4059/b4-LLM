@@ -1,0 +1,11 @@
+{
+  "strategy": "plan_execute",
+  "complexity": "high",
+  "confidence": 0.55,
+  "reason": "routing classifier did not return a valid AIMessage; fallback to heuristic. 启发式未能确认其为单步任务，保守回退到 plan_execute。",
+  "llm_status": "error",
+  "llm_error": {
+    "type": "ValueError",
+    "message": "tool_calls list must not be empty"
+  }
+}

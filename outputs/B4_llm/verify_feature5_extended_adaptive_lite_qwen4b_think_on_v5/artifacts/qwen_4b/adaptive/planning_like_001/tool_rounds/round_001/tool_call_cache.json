@@ -1,0 +1,56 @@
+{
+  "ccb11f458eeac9f62c6ed7fd90de1a8f3e9c898d17d30a0b6384118beab4cb65": {
+    "name": "local_file_search",
+    "args": {
+      "query": "tool calling",
+      "root_dir": "docs",
+      "file_types": [
+        "txt",
+        "md"
+      ],
+      "top_k": 10
+    },
+    "created_at": "2026-07-10T09:21:35+08:00",
+    "skill_result": {
+      "skill_name": "local_file_search",
+      "status": "success",
+      "input": {
+        "query": "tool calling",
+        "root_dir": "docs",
+        "file_types": [
+          "txt",
+          "md"
+        ],
+        "top_k": 10
+      },
+      "output": {
+        "query": "tool calling",
+        "root_dir": "docs",
+        "files_scanned": 3,
+        "total_matches": 2,
+        "truncated_files": 0,
+        "skipped_files": 0,
+        "results": [
+          {
+            "path": "docs/tool_calling.md",
+            "score": 30.0,
+            "snippet": "# Tool Calling 模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。",
+            "line_number": 1,
+            "match_count": 5,
+            "match_type": "exact"
+          },
+          {
+            "path": "docs/search_skill_demo.md",
+            "score": 5.0,
+            "snippet": "# Search Skill Demo 检索演示文档用于验证 local_file_search 工具。 当用户询问“检索演示 工具编排”时，搜索工具应能命中这个文件。 工具编排强调模型先决定调用哪个工具，再由运行时执行工具并把 ToolMessage 返回给模型。",
+            "line_number": 5,
+            "match_count": 1,
+            "match_type": "token"
+          }
+        ]
+      },
+      "error": null,
+      "latency_ms": 3.63
+    }
+  }
+}

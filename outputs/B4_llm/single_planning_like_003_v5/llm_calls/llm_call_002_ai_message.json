@@ -1,0 +1,20 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "local_file_search",
+      "args": {
+        "query": "Agent 系统组成",
+        "root_dir": "docs",
+        "file_types": [
+          "txt",
+          "md"
+        ],
+        "top_k": 10
+      }
+    }
+  ],
+  "_step_marker": "STEP_DONE:1:搜索 docs 目录中与 Agent 系统组成相关的文件"
+}

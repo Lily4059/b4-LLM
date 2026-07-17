@@ -1,0 +1,45 @@
+{
+  "mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "default",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+  "raw_text": "{\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"args\":{\"query\":\"房源 租金 宠物 噪音 通勤\",\"root_dir\":\"life_rent\",\"file_types\":[\".md\",\".txt\"],\"top_k\":10}}]}\n",
+  "parsed_candidate": {
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {
+          "query": "房源 租金 宠物 噪音 通勤",
+          "root_dir": "life_rent",
+          "file_types": [
+            ".md",
+            ".txt"
+          ],
+          "top_k": 10
+        }
+      }
+    ]
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"args\":{\"query\":\"房源 租金 宠物 噪音 通勤\",\"root_dir\":\"life_rent\",\"file_types\":[\".md\",\".txt\"],\"top_k\":10}}]}\n",
+      "usage": {
+        "input_tokens": 2199,
+        "output_tokens": 57,
+        "elapsed_seconds": 5.0644
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-06T23:20:39+08:00",
+  "usage": {
+    "input_tokens": 2199,
+    "output_tokens": 57,
+    "elapsed_seconds": 5.0644
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:1:已完成搜索并读取 docs/tool_calling.md 文件。关键结论：Tool Calling 模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。工具编排强调模型先决定调用哪个工具，再由运行时执行工具并把 ToolMessage 返回给模型。",
+  "tool_calls": []
+}

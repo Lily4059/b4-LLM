@@ -1,0 +1,23 @@
+case_id,title,category,mode,model_profile,model_name,model_target,expected_status,actual_status,expected_tools,actual_tools,tool_match,structured_output_success,args_complete,success,input_tokens,output_tokens,elapsed_seconds,error_type,error_message
+direct_answer_001,直接回答类,direct_answer,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,,,True,True,True,True,3606,95,9.2328,,
+direct_answer_002,直接回答类-对比概念,direct_answer,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,,,True,True,True,True,3659,159,12.9387,,
+direct_answer_003,直接回答类-结构化输出,direct_answer,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,,,True,True,True,True,3709,250,20.4002,,
+single_tool_001,单工具读取文档,single_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader,file_reader,True,True,True,True,3155,96,9.6109,,
+single_tool_003,单工具读取文档-同义改写,single_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader,file_reader,True,True,True,True,3157,112,10.3046,,
+single_tool_004,单工具读取文档-查看,single_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader,file_reader,True,True,True,True,10237,197,22.0274,,
+single_tool_005,单工具读取文档-不存在文件,single_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader,file_reader,True,True,True,True,3191,210,17.3745,,
+single_tool_002,单工具计算,single_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,calculator,calculator,True,True,True,True,3088,63,7.225,,
+single_tool_006,单工具计算-复杂表达式,single_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,calculator,calculator,True,True,True,True,3120,81,7.6487,,
+multi_tool_001,多工具并行读取,multi_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader|file_reader,file_reader|file_reader,True,True,True,True,11544,849,69.5716,,
+multi_tool_002,多工具并行读取-同义改写,multi_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader|file_reader,file_reader|file_reader,True,True,True,True,11348,327,29.2721,,
+multi_tool_003,多工具并行读取-三文件,multi_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,needs_user,needs_user,,,True,True,True,True,,,,HumanInTheLoop,user request contains duplicate local resources
+planning_like_001,规划倾向任务,planning_like,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,local_file_search|file_reader,local_file_search|file_reader,True,True,True,True,19174,350,38.1771,,
+planning_like_002,规划倾向任务-搜索记忆,planning_like,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,local_file_search|file_reader,local_file_search|file_reader,True,True,True,True,19228,463,45.0895,,
+planning_like_003,规划倾向任务-先搜再读两篇,planning_like,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,needs_user,tool_budget_exceeded,local_file_search|file_reader,local_file_search|file_reader|local_file_search,True,False,True,False,25430,393,44.6172,ToolBudgetExceeded,tool call budget exhausted before the task converged
+table_tool_001,表格分析任务,table_analysis,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,table_analyzer,table_analyzer,True,True,True,True,3335,235,17.7062,,
+table_tool_002,表格分析任务-省略前缀,table_analysis,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,table_analyzer,table_analyzer,True,True,True,True,3332,236,18.8485,,
+table_tool_003,表格分析任务-描述统计,table_analysis,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,table_analyzer,table_analyzer,True,True,True,True,3363,185,15.166,,
+mixed_001,混合任务-读文档再计算,mixed,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader,file_reader,True,True,True,True,3165,81,7.9651,,
+mixed_002,混合任务-先读再提取要点,mixed,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader,file_reader,True,True,True,True,4908,177,16.3333,,
+guardrail_001,护栏任务-路径存在性,guardrail,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader,file_reader,True,True,True,True,10305,116,15.2819,,
+guardrail_002,护栏任务-缺失文件也算结论,guardrail,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,success,success,file_reader,file_reader,True,True,True,True,11536,259,25.0877,,

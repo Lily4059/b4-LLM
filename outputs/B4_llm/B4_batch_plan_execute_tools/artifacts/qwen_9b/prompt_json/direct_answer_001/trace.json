@@ -1,0 +1,80 @@
+{
+  "status": "success",
+  "tool_rounds_used": 0,
+  "llm_call_count": 3,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "请用一句中文解释什么是 tool calling。",
+        "status": "completed",
+        "summary": "Tool calling 是指智能体在完成任务时，通过调用外部工具（如计算器、文件读取等）来获取信息或执行操作的能力。",
+        "error": ""
+      }
+    ]
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "Tool calling 是指智能体在完成任务时，通过调用外部工具（如计算器、文件读取等）来获取信息或执行操作的能力。",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "execute",
+      "ai_message": {
+        "role": "assistant",
+        "content": "STEP_DONE:1:Tool calling 是指智能体在完成任务时，通过调用外部工具（如计算器、文件读取等）来获取信息或执行操作的能力。",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请用一句中文解释什么是 tool calling。",
+            "status": "completed",
+            "summary": "Tool calling 是指智能体在完成任务时，通过调用外部工具（如计算器、文件读取等）来获取信息或执行操作的能力。",
+            "error": ""
+          }
+        ]
+      }
+    },
+    {
+      "turn_index": 3,
+      "phase": "finish",
+      "ai_message": {
+        "role": "assistant",
+        "content": "Tool calling 是指智能体在完成任务时，通过调用外部工具（如计算器、文件读取等）来获取信息或执行操作的能力。",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请用一句中文解释什么是 tool calling。",
+            "status": "completed",
+            "summary": "Tool calling 是指智能体在完成任务时，通过调用外部工具（如计算器、文件读取等）来获取信息或执行操作的能力。",
+            "error": ""
+          }
+        ]
+      }
+    }
+  ],
+  "error": null
+}

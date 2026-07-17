@@ -1,0 +1,46 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "life_rent/listing_a.md",
+        "max_chars": 1200
+      }
+    },
+    {
+      "id": "call_002",
+      "name": "file_reader",
+      "args": {
+        "path": "life_rent/listing_b.md",
+        "max_chars": 1200
+      }
+    },
+    {
+      "id": "call_003",
+      "name": "file_reader",
+      "args": {
+        "path": "life_rent/listing_c.md",
+        "max_chars": 1200
+      }
+    },
+    {
+      "id": "call_004",
+      "name": "file_reader",
+      "args": {
+        "path": "life_rent/chat_log_noise.txt",
+        "max_chars": 800
+      }
+    },
+    {
+      "id": "call_005",
+      "name": "file_reader",
+      "args": {
+        "path": "life_rent/requirements.md",
+        "max_chars": 800
+      }
+    }
+  ]
+}

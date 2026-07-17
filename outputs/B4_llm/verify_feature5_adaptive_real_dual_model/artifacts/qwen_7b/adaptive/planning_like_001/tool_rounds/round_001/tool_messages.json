@@ -1,0 +1,16 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "local_file_search",
+    "content": "{\"skill_name\":\"local_file_search\",\"status\":\"success\",\"input\":{\"query\":\"tool calling\",\"root_dir\":\"docs\",\"file_types\":[\"txt\",\"md\"],\"top_k\":1},\"output\":{\"query\":\"tool calling\",\"root_dir\":\"docs\",\"files_scanned\":3,\"total_matches\":2,\"truncated_files\":0,\"skipped_files\":0,\"results\":[{\"path\":\"docs/tool_calling.md\",\"score\":30.0,\"snippet\":\"# Tool Calling 模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。\",\"line_number\":1,\"match_count\":5,\"match_type\":\"exact\"}]},\"error\":null,\"latency_ms\":0.824}",
+    "status": "success"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_002",
+    "name": "file_reader",
+    "content": "{\"skill_name\":\"file_reader\",\"status\":\"error\",\"input\":{\"path\":\"\",\"max_chars\":1000},\"output\":null,\"error\":{\"type\":\"ValueError\",\"code\":\"UNSUPPORTED_FORMAT\",\"category\":\"unsupported_format\",\"message\":\"file_reader only supports .txt and .md files\",\"retryable\":false,\"details\":{}},\"latency_ms\":0.25}",
+    "status": "error"
+  }
+]

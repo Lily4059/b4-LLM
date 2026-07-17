@@ -1,0 +1,11 @@
+# Plan-and-Execute 进度
+
+- status: success
+- llm_calls: 4
+- tool_rounds: 1
+- steps: total=1, completed=1, failed=0, pending=0
+
+# Plan-and-Execute 计划预览
+
+1. 请同时阅读 docs/agent_intro.txt 和 docs/tool_calling.md，比较两个文档的关注点差异。如果需要工具，请在同一轮并行请求。 [completed]
+   - summary: 已完成文档对比：agent_intro.txt 侧重 Agent 系统整体架构（模型、工具、记忆、执行循环），tool_calling.md 聚焦工具调用职责分工（模型决策、工具校验执行、运行时消息闭环）。共同关注点：工具在 Agent 中的核心作用、模型与工具协作机制。关键差异：前者强调系统组成与记忆功能，后者明确工具调用各层职责边界。结论：tool_calling.md 为 agent_intro.txt 中“工具”部分的细化补充，建议后续结合两者理解完整工具调用流程。

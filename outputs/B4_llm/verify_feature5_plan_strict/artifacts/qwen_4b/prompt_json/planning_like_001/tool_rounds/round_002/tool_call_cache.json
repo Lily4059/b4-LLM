@@ -1,0 +1,26 @@
+{
+  "7640c7e8fef9c5142a6fb694cb7b4909d658db91f33c40e9f31075a7b12aff2d": {
+    "name": "file_reader",
+    "args": {
+      "path": "docs/tool_calling.md",
+      "max_chars": 2000
+    },
+    "created_at": "2026-07-08T20:31:24+08:00",
+    "skill_result": {
+      "skill_name": "file_reader",
+      "status": "success",
+      "input": {
+        "path": "docs/tool_calling.md",
+        "max_chars": 2000
+      },
+      "output": {
+        "content": "# Tool Calling\n\n模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。\n",
+        "num_chars": 53,
+        "source": "docs/tool_calling.md",
+        "truncated": false
+      },
+      "error": null,
+      "latency_ms": 0.368
+    }
+  }
+}

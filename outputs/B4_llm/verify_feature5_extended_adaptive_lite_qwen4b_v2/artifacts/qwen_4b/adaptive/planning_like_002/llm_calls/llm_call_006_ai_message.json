@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "STEP_DONE:3: 总结：根据 docs/agent_intro.txt，Memory 为 Agent 系统提供全局知识和历史对话上下文，是 Agent 由模型、工具、记忆和执行循环组成的核心组成部分。",
+  "tool_calls": []
+}

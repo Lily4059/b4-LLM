@@ -1,0 +1,65 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: file_reader. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请读取 docs/agent_intro.txt，并给出三条中文要点。"
+  },
+  {
+    "role": "assistant",
+    "content": "```json\n{\n  \"plan\": [\n    \"读取 docs/agent_intro.txt 文件内容\",\n    \"分析文件内容，提取关键信息\",\n    \"整理并总结三条中文要点\"\n  ]\n}\n```",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "你正在以 Plan-and-Execute 模式工作。\n先严格按计划逐步执行，再给最终回答。\n\n<plan_state>\n{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"请读取 docs/agent_intro.txt，并给出三条中文要点。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}]}\n</plan_state>\n\n执行规则：\n- 如果需要调用工具：必须输出 schema B，且 content 必须是空字符串。\n- 当前步骤不需要工具且你已完成：输出 schema A，content 以 STEP_DONE:<step_number>:<summary> 开头。\n- 如果步骤失败且需要回退/重试：输出 schema A 且 content 以 STEP_FAIL:<step_number>:<reason> 开头。\n- 对于文件/表格缺失类失败：在输出 STEP_FAIL 之前，优先尝试一次最小修复重试（例如修正路径/目录前缀），或用 ASK_USER 让用户确认文件位置。\n- 若遇到关键歧义/需要用户确认：输出 schema A，content 以 ASK_USER:<question> 开头，并在后续行提供可选项（用短列表）。\n- 当有多个可行方案时：列出方案 A/B/C 的权衡点，并给出推荐及理由（多目标权衡）。\n- 只有当所有步骤 status 都变为 completed 后，才输出最终回答（schema A，content 为正常回答文本，不要以 STEP_DONE/STEP_FAIL 开头）。\n\n开始执行计划。请先完成第 1 步。需要工具就调用；完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "file_reader",
+        "args": {
+          "path": "docs/agent_intro.txt"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "file_reader",
+    "content": "{\"skill_name\": \"file_reader\", \"status\": \"success\", \"input\": {\"path\": \"docs/agent_intro.txt\"}, \"output\": {\"content\": \"Agent 系统通常由模型、工具、记忆和执行循环组成。\\n工具调用让模型能够读取本地文件、执行计算，并把结果用于后续回答。\\nMemory 为 Agent 提供全局知识和历史对话上下文。\\n\", \"num_chars\": 92, \"source\": \"docs/agent_intro.txt\", \"truncated\": false}, \"error\": null, \"latency_ms\": 0.472}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "当前执行的是第 1 步：请读取 docs/agent_intro.txt，并给出三条中文要点。\n- file_reader 成功：Agent 系统通常由模型、工具、记忆和执行循环组成。\n工具调用让模型能够读取本地文件、执行计算，并把结果用于后续回答。\nMemory 为 Agent 提供全局知识和历史对话上下文。\n\n请只针对当前步骤做决策：\n- 如果第 1 步已经完成，只输出 schema A，content 以 STEP_DONE:1: 开头，且不要再调用工具；\n- 如果还没完成，只调用新增必要工具，不要重复相同调用。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "file_reader",
+        "args": {
+          "path": "docs/agent_intro.txt"
+        }
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "所有步骤已完成。请输出最终回答（schema A），不要以 STEP_DONE/STEP_FAIL 开头。"
+  },
+  {
+    "role": "assistant",
+    "content": "根据文件内容，以下是三条中文要点：\n\n1. **Agent 系统架构**：Agent 系统通常由模型、工具、记忆和执行循环四个核心部分组成。\n\n2. **工具的作用**：工具调用使模型能够读取本地文件、执行计算等操作，并将结果用于后续回答。\n\n3. **记忆的功能**：Memory 为 Agent 提供全局知识和历史对话上下文，帮助系统保持连续性和一致性。",
+    "tool_calls": []
+  }
+]

@@ -1,0 +1,10 @@
+表格文件 tables/results.csv 包含 3 行数据和 3 列，列结构如下：
+
+1. task：任务名称，包含 read_file、calculate、search
+2. score：评分，数值范围 88-98，平均 92.67
+3. latency：延迟时间，数值范围 3.1-20.5 毫秒，平均 12.93 毫秒
+
+预览数据：
+- read_file: score=92, latency=15.2ms
+- calculate: score=98, latency=3.1ms
+- search: score=88, latency=20.5ms

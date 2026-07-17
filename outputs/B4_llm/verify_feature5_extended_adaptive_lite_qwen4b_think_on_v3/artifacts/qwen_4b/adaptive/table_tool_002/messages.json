@@ -1,0 +1,41 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: table_analyzer. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请分析 results.csv 的列结构和预览内容。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "table_analyzer",
+        "args": {
+          "path": "results.csv",
+          "max_rows_preview": 10,
+          "describe": true
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "table_analyzer",
+    "content": "{\"skill_name\": \"table_analyzer\", \"status\": \"success\", \"input\": {\"path\": \"tables/results.csv\", \"max_rows_preview\": 10, \"describe\": true}, \"output\": {\"path\": \"tables/results.csv\", \"num_rows\": 3, \"num_columns\": 3, \"columns\": [\"task\", \"score\", \"latency\"], \"preview\": [{\"task\": \"read_file\", \"score\": \"92\", \"latency\": \"15.2\"}, {\"task\": \"calculate\", \"score\": \"98\", \"latency\": \"3.1\"}, {\"task\": \"search\", \"score\": \"88\", \"latency\": \"20.5\"}], \"describe\": {\"score\": {\"count\": 3, \"min\": 88.0, \"max\": 98.0, \"mean\": 92.66666666666667}, \"latency\": {\"count\": 3, \"min\": 3.1, \"max\": 20.5, \"mean\": 12.933333333333332}}, \"original_preview_rows\": 3, \"compressed\": false}, \"error\": null, \"latency_ms\": 0.68}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "已获得本轮工具结果。现在必须直接给出最终回答（schema A），tool_calls 必须为 []。不要再请求任何工具。"
+  },
+  {
+    "role": "assistant",
+    "content": "results.csv 包含3列：task、score、latency。共有3行数据，分别对应 read_file、calculate、search 三种任务。score 范围 88-98，平均约92.7；latency 范围 3.1-20.5 毫秒，平均约12.9 毫秒。",
+    "tool_calls": []
+  }
+]

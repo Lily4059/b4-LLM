@@ -1,0 +1,61 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: file_reader. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请同时阅读 docs/agent_intro.txt 和 docs/tool_calling.md，比较两个文档的关注点差异。如果需要工具，请在同一轮并行请求。"
+  },
+  {
+    "role": "assistant",
+    "content": "计划：1. 读取 docs/agent_intro.txt 文件；2. 读取 docs/tool_calling.md 文件；3. 比较两个文档的关注点差异。",
+    "tool_calls": []
+  },
+  {
+    "role": "user",
+    "content": "你正在以 Plan-and-Execute 模式工作。\n先严格按计划逐步执行，再给最终回答。\n\n<plan_state>\n{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"请同时阅读 docs/agent_intro.txt 和 docs/tool_calling.md，比较两个文档的关注点差异。如果需要工具，请在同一轮并行请求。\", \"status\": \"completed\", \"summary\": \"Fast Path：单步任务且不需要外部工具证据，直接完成。\", \"error\": \"\"}], \"evidence_policy\": \"lite\"}\n</plan_state>\n\n执行规则：\n- 如果需要调用工具：必须输出 schema B，且 content 必须是空字符串。\n- 当前步骤不需要工具且你已完成：输出 schema A，content 以 STEP_DONE:<step_number>:<summary> 开头。\n- 如果步骤失败且需要回退/重试：输出 schema A 且 content 以 STEP_FAIL:<step_number>:<reason> 开头。\n- 对于文件/表格缺失类失败：在输出 STEP_FAIL 之前，优先尝试一次最小修复重试（例如修正路径/目录前缀），或用 ASK_USER 让用户确认文件位置。\n- 若遇到关键歧义/需要用户确认：输出 schema A，content 以 ASK_USER:<question> 开头，并在后续行提供可选项（用短列表）。\n- 当有多个可行方案时：列出方案 A/B/C 的权衡点，并给出推荐及理由（多目标权衡）。\n- 只有当所有步骤 status 都变为 completed 后，才输出最终回答（schema A，content 为正常回答文本，不要以 STEP_DONE/STEP_FAIL 开头）。\n\n该任务计划步数≤1，且不需要外部工具证据。请直接输出最终回答（schema A），不要调用任何工具。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "file_reader",
+        "args": {
+          "path": "docs/agent_intro.txt",
+          "max_chars": 1200
+        }
+      },
+      {
+        "id": "call_002",
+        "name": "file_reader",
+        "args": {
+          "path": "docs/tool_calling.md",
+          "max_chars": 1200
+        }
+      }
+    ],
+    "_step_marker": "STEP_DONE:1:已完成两个文档的并行读取与比较分析。"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "file_reader",
+    "content": "{\"skill_name\": \"file_reader\", \"status\": \"success\", \"input\": {\"path\": \"docs/agent_intro.txt\", \"max_chars\": 1200}, \"output\": {\"content\": \"Agent 系统通常由模型、工具、记忆和执行循环组成。\\n工具调用让模型能够读取本地文件、执行计算，并把结果用于后续回答。\\nMemory 为 Agent 提供全局知识和历史对话上下文。\\n\", \"num_chars\": 92, \"source\": \"docs/agent_intro.txt\", \"truncated\": false}, \"error\": null, \"latency_ms\": 0.531}",
+    "status": "success"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_002",
+    "name": "file_reader",
+    "content": "{\"skill_name\": \"file_reader\", \"status\": \"success\", \"input\": {\"path\": \"docs/tool_calling.md\", \"max_chars\": 1200}, \"output\": {\"content\": \"# Tool Calling\\n\\n模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。\\n\", \"num_chars\": 53, \"source\": \"docs/tool_calling.md\", \"truncated\": false}, \"error\": null, \"latency_ms\": 0.264}",
+    "status": "success"
+  },
+  {
+    "role": "assistant",
+    "content": "两个文档的关注点差异如下：\n\n1. **docs/agent_intro.txt**：\n   - 关注Agent系统的整体架构，包括模型、工具、记忆和执行循环。\n   - 强调工具调用的作用：让模型能够读取本地文件、执行计算，并将结果用于后续回答。\n   - 提及Memory为Agent提供全局知识和历史对话上下文。\n   - 更偏向于系统层面的概念介绍。\n\n2. **docs/tool_calling.md**：\n   - 聚焦于工具调用的具体分工：模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。\n   - 更具体地描述了工具调用过程中的职责划分。\n   - 更偏向于工具调用机制的技术细节。\n\n总结：前者是系统架构层面的概述，后者是工具调用机制层面的具体分工说明。",
+    "tool_calls": []
+  }
+]

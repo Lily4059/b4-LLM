@@ -1,0 +1,16 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "file_reader",
+    "content": "{\"skill_name\":\"file_reader\",\"status\":\"error\",\"input\":{\"path\":\"docs/agent_system_composition.md\",\"max_chars\":2000},\"output\":null,\"error\":{\"type\":\"FileNotFoundError\",\"code\":\"RESOURCE_NOT_FOUND\",\"category\":\"resource_not_found\",\"message\":\"file not found: docs/agent_system_composition.md\",\"retryable\":false,\"details\":{}},\"latency_ms\":0.535}",
+    "status": "error"
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_002",
+    "name": "file_reader",
+    "content": "{\"skill_name\":\"file_reader\",\"status\":\"error\",\"input\":{\"path\":\"docs/agent_architecture.txt\",\"max_chars\":2000},\"output\":null,\"error\":{\"type\":\"FileNotFoundError\",\"code\":\"RESOURCE_NOT_FOUND\",\"category\":\"resource_not_found\",\"message\":\"file not found: docs/agent_architecture.txt\",\"retryable\":false,\"details\":{}},\"latency_ms\":0.215}",
+    "status": "error"
+  }
+]

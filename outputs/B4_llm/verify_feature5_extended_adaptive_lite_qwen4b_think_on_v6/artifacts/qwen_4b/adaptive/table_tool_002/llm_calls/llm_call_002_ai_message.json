@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "根据工具返回的结果，results.csv 的列结构和预览内容如下：\n\n**列结构：**\n- 共 3 列：`task`、`score`、`latency`\n\n**预览内容（3行数据）：**\n| task | score | latency |\n|------|-------|---------|\n| read_file | 92 | 15.2 |\n| calculate | 98 | 3.1 |\n| search | 88 | 20.5 |\n\n**统计信息：**\n- **score 列**：最小值 88.0，最大值 98.0，平均值 92.67\n- **latency 列**：最小值 3.1，最大值 20.5，平均值 12.93",
+  "tool_calls": []
+}

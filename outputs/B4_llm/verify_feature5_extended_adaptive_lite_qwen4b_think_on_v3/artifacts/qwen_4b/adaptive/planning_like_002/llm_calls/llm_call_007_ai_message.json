@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "在 docs 目录中搜索与 Memory 相关的内容，找到唯一匹配文件：docs/agent_intro.txt。\n\n文件内容总结：\nAgent 系统通常由模型、工具、记忆和执行循环组成。\n- 工具调用让模型能够读取本地文件、执行计算，并把结果用于后续回答。\n- Memory 为 Agent 提供全局知识和历史对话上下文。\n\n核心要点：Memory 在 Agent 系统中负责维护全局知识和历史对话上下文，确保系统的连续性和上下文感知能力。",
+  "tool_calls": []
+}

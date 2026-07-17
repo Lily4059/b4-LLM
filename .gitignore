@@ -11,10 +11,7 @@ outputs/B4_compat/*
 !outputs/B4_compat/test_b4_compat_batch_eval/eval_report.csv
 !outputs/B4_compat/test_b4_compat_batch_eval/eval_summary.json
 !outputs/B4_llm/
-outputs/B4_llm/*
-!outputs/B4_llm/verify_feature5_extended_adaptive_lite_qwen4b_think_on_v8/
-!outputs/B4_llm/verify_feature5_extended_adaptive_lite_qwen4b_think_on_v8/eval_report.csv
-!outputs/B4_llm/verify_feature5_extended_adaptive_lite_qwen4b_think_on_v8/eval_summary.json
+!outputs/B4_llm/**
 !outputs/full_demo/
 outputs/full_demo/*
 !outputs/full_demo/demo_report.md
@@ -38,3 +35,5 @@ models/*
 *_2.html
 *_1.js
 *_2.js
+!ai_web/**
+!图片/**

@@ -1,0 +1,13 @@
+case_id,title,category,mode,model_profile,model_name,model_target,expected_tools,actual_tools,tool_match,structured_output_success,args_complete,success,input_tokens,output_tokens,elapsed_seconds,error_type,error_message
+direct_answer_001,直接回答类,direct_answer,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,,,True,True,True,True,1247,35,3.6964,,
+single_tool_001,单工具读取文档,single_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,file_reader,file_reader,True,True,True,True,2861,96,9.2548,,
+single_tool_002,单工具计算,single_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,calculator,,False,True,True,False,3175,76,7.3157,,
+multi_tool_001,多工具并行读取,multi_tool,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,file_reader|file_reader,file_reader|file_reader,True,True,True,True,7184,374,31.5829,,
+planning_like_001,规划倾向任务,planning_like,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,local_file_search|file_reader,local_file_search|file_reader,True,True,True,True,12075,544,46.0871,,
+table_tool_001,表格分析任务,table_analysis,adaptive,qwen_4b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,table_analyzer,table_analyzer|table_analyzer,False,True,True,False,9159,338,31.3869,,
+direct_answer_001,直接回答类,direct_answer,adaptive,qwen_9b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,,,True,True,True,True,1247,35,3.7189,,
+single_tool_001,单工具读取文档,single_tool,adaptive,qwen_9b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,file_reader,file_reader,True,True,True,True,2860,96,9.4561,,
+single_tool_002,单工具计算,single_tool,adaptive,qwen_9b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,calculator,,False,True,True,False,3175,76,7.2752,,
+multi_tool_001,多工具并行读取,multi_tool,adaptive,qwen_9b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,file_reader|file_reader,file_reader|file_reader,True,True,True,True,7184,377,31.586,,
+planning_like_001,规划倾向任务,planning_like,adaptive,qwen_9b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,local_file_search|file_reader,local_file_search|file_reader,True,True,True,True,12075,544,45.8808,,
+table_tool_001,表格分析任务,table_analysis,adaptive,qwen_9b,Qwen3.5-4B,/root/siton-tmp/assignment_B/Qwen3.5-4B,table_analyzer,table_analyzer|table_analyzer,False,True,True,False,9159,338,31.1229,,

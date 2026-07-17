@@ -1,0 +1,90 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: table_analyzer. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请分析 tables/results.csv 的列结构和预览内容。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "table_analyzer",
+        "args": {
+          "path": "tables/results.csv",
+          "max_rows_preview": 10,
+          "describe": true
+        }
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "你正在以 Plan-and-Execute 模式工作。\n先严格按计划逐步执行，再给最终回答。\n\n<plan_state>\n{\"mode\": \"plan_execute\", \"steps\": [{\"step\": 1, \"title\": \"请分析 tables/results.csv 的列结构和预览内容。\", \"status\": \"pending\", \"summary\": \"\", \"error\": \"\"}]}\n</plan_state>\n\n执行规则：\n- 如果需要调用工具：必须输出 schema B，且 content 必须是空字符串。\n- 当前步骤不需要工具且你已完成：输出 schema A，content 以 STEP_DONE:<step_number>:<summary> 开头。\n- 如果步骤失败且需要回退/重试：输出 schema A 且 content 以 STEP_FAIL:<step_number>:<reason> 开头。\n- 对于文件/表格缺失类失败：在输出 STEP_FAIL 之前，优先尝试一次最小修复重试（例如修正路径/目录前缀），或用 ASK_USER 让用户确认文件位置。\n- 若遇到关键歧义/需要用户确认：输出 schema A，content 以 ASK_USER:<question> 开头，并在后续行提供可选项（用短列表）。\n- 当有多个可行方案时：列出方案 A/B/C 的权衡点，并给出推荐及理由（多目标权衡）。\n- 只有当所有步骤 status 都变为 completed 后，才输出最终回答（schema A，content 为正常回答文本，不要以 STEP_DONE/STEP_FAIL 开头）。\n\n开始执行计划。请先完成第 1 步。需要工具就调用；完成后按 STEP_DONE 规则汇报。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "table_analyzer",
+        "args": {
+          "path": "tables/results.csv"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "table_analyzer",
+    "content": "{\"skill_name\": \"table_analyzer\", \"status\": \"success\", \"input\": {\"path\": \"tables/results.csv\"}, \"output\": {\"path\": \"tables/results.csv\", \"num_rows\": 3, \"num_columns\": 3, \"columns\": [\"task\", \"score\", \"latency\"], \"preview\": [{\"task\": \"read_file\", \"score\": \"92\", \"latency\": \"15.2\"}, {\"task\": \"calculate\", \"score\": \"98\", \"latency\": \"3.1\"}, {\"task\": \"search\", \"score\": \"88\", \"latency\": \"20.5\"}], \"describe\": {\"score\": {\"count\": 3, \"min\": 88.0, \"max\": 98.0, \"mean\": 92.66666666666667}, \"latency\": {\"count\": 3, \"min\": 3.1, \"max\": 20.5, \"mean\": 12.933333333333332}}, \"original_preview_rows\": 3, \"compressed\": false}, \"error\": null, \"latency_ms\": 0.707}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "当前执行的是第 1 步：请分析 tables/results.csv 的列结构和预览内容。\n- table_analyzer 成功：{\"path\": \"tables/results.csv\", \"num_rows\": 3, \"num_columns\": 3, \"columns\": [\"task\", \"score\", \"latency\"], \"preview\": [{\"task\": \"read_file\", \"score\": \"92\", \"latency\": \"15.2\"}, {\"task\": \"calculate\", \"sco\n\n请只针对当前步骤做决策：\n- 如果第 1 步已经完成，只输出 schema A，content 以 STEP_DONE:1: 开头，且不要再调用工具；\n- 如果还没完成，只调用新增必要工具，不要重复相同调用。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "table_analyzer",
+        "args": {}
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "你当前只能执行第 1 步：请分析 tables/results.csv 的列结构和预览内容。\n你刚刚请求的部分工具调用不属于当前步骤，因此本轮不会执行。\n阻止原因：\n- table_analyzer 缺少 path 参数。\n\n请重新输出：\n- 只保留第 1 步所需的工具调用；\n- 如果第 1 步证据已经足够，请直接输出 STEP_DONE:1:...\n- 不要提前执行后续步骤。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "table_analyzer",
+        "args": {
+          "path": "tables/results.csv"
+        }
+      }
+    ]
+  },
+  {
+    "role": "user",
+    "content": "所有步骤已完成。请输出最终回答（schema A），不要以 STEP_DONE/STEP_FAIL 开头。"
+  },
+  {
+    "role": "assistant",
+    "content": "根据对 `tables/results.csv` 的分析，该表格包含以下信息：\n\n**列结构：**\n- `task`：任务名称\n- `score`：分数\n- `latency`：延迟时间\n\n**预览内容：**\n1. `read_file` 任务：分数 92，延迟 15.2\n2. `calculate` 任务：分数 98，延迟 3.1\n3. `search` 任务：分数 88，延迟 20.5\n\n**数据统计：**\n- 总行数：3\n- 总列数：3\n- 分数范围：88.0 - 98.0，平均值约 92.67\n- 延迟范围：3.1 - 20.5，平均值约 12.93",
+    "tool_calls": []
+  }
+]

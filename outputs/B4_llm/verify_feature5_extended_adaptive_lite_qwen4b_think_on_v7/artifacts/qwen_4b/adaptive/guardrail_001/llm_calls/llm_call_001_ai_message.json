@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "检查 docs/agent_intro.txt 是否存在",
+  "tool_calls": []
+}

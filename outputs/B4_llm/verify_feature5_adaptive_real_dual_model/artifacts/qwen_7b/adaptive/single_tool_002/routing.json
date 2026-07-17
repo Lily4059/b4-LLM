@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.9,
+  "reason": "计算简单，直接使用计算器即可得出结果。",
+  "llm_status": "success",
+  "llm_error": null
+}

@@ -1,0 +1,45 @@
+{
+  "mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_4b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+  "raw_text": "{\"content\":\"\",\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"args\":{\"query\":\"Agent 系统组成\",\"root_dir\":\"docs\",\"file_types\":[\"txt\",\"md\"],\"top_k\":10}}]}\n",
+  "parsed_candidate": {
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {
+          "query": "Agent 系统组成",
+          "root_dir": "docs",
+          "file_types": [
+            "txt",
+            "md"
+          ],
+          "top_k": 10
+        }
+      }
+    ]
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"\",\"tool_calls\":[{\"id\":\"call_001\",\"name\":\"local_file_search\",\"args\":{\"query\":\"Agent 系统组成\",\"root_dir\":\"docs\",\"file_types\":[\"txt\",\"md\"],\"top_k\":10}}]}\n",
+      "usage": {
+        "input_tokens": 2252,
+        "output_tokens": 51,
+        "elapsed_seconds": 4.9864
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-09T14:15:48+08:00",
+  "usage": {
+    "input_tokens": 2252,
+    "output_tokens": 51,
+    "elapsed_seconds": 4.9864
+  }
+}

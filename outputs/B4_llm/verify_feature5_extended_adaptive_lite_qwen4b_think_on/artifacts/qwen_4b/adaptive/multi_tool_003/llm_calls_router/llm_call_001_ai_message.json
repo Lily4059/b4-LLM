@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+  "tool_calls": []
+}

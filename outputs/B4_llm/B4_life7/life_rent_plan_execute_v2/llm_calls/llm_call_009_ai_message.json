@@ -1,0 +1,14 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "table_analyzer",
+      "args": {
+        "path": "tables/life_rent_budget.csv"
+      }
+    }
+  ],
+  "_step_marker": "STEP_FAIL:3: 工具调用失败。原因：`table_analyzer` 工具不支持 `max_chars` 参数。替代方案：移除该参数后重试读取表格。"
+}

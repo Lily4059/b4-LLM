@@ -1,0 +1,14 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "table_analyzer",
+      "args": {
+        "path": "results.csv",
+        "max_chars": 5000
+      }
+    }
+  ]
+}

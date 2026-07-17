@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "请用一句中文解释什么是 tool calling。",
+  "tool_calls": []
+}

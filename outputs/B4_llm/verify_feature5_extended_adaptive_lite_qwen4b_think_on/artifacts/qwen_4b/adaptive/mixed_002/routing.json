@@ -1,0 +1,11 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.85,
+  "reason": "routing classifier did not return a valid AIMessage; fallback to heuristic. 任务更像单步求值或单轮外部读取/分析，可在 0~1 轮工具后收敛。",
+  "llm_status": "error",
+  "llm_error": {
+    "type": "ValueError",
+    "message": "tool call missing keys: name"
+  }
+}

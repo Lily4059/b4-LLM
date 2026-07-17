@@ -1,0 +1,45 @@
+{
+  "mode": "native_tools",
+  "backend": "transformers",
+  "model_profile": "qwen_9b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+  "raw_text": "<tool_call>\n<function=local_file_search>\n<parameter=query>\ntool calling\n</parameter>\n<parameter=root_dir>\ndocs\n</parameter>\n<parameter=file_types>\n[\"txt\", \"md\"]\n</parameter>\n<parameter=top_k>\n10\n</parameter>\n</function>\n</tool_call>\n",
+  "parsed_candidate": {
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "local_file_search",
+        "args": {
+          "query": "tool calling",
+          "root_dir": "docs",
+          "file_types": [
+            "txt",
+            "md"
+          ],
+          "top_k": 10
+        }
+      }
+    ]
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "<tool_call>\n<function=local_file_search>\n<parameter=query>\ntool calling\n</parameter>\n<parameter=root_dir>\ndocs\n</parameter>\n<parameter=file_types>\n[\"txt\", \"md\"]\n</parameter>\n<parameter=top_k>\n10\n</parameter>\n</function>\n</tool_call>\n",
+      "usage": {
+        "input_tokens": 1700,
+        "output_tokens": 72,
+        "elapsed_seconds": 6.031
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-07T11:30:16+08:00",
+  "usage": {
+    "input_tokens": 1700,
+    "output_tokens": 72,
+    "elapsed_seconds": 6.031
+  }
+}

@@ -1,0 +1,154 @@
+{
+  "status": "llm_parse_error",
+  "tool_rounds_used": 0,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "步骤1：读取 docs/agent_intro.txt 文件，获取完整内容。",
+        "status": "pending",
+        "summary": "",
+        "error": ""
+      },
+      {
+        "step": 2,
+        "title": "步骤2：分析文件内容，识别关键信息点。",
+        "status": "pending",
+        "summary": "",
+        "error": ""
+      },
+      {
+        "step": 3,
+        "title": "步骤3：筛选并整理出三条最重要的关键信息。",
+        "status": "pending",
+        "summary": "",
+        "error": ""
+      },
+      {
+        "step": 4,
+        "title": "步骤4：将三条关键信息翻译成中文。",
+        "status": "pending",
+        "summary": "",
+        "error": ""
+      },
+      {
+        "step": 5,
+        "title": "步骤5：验证翻译的准确性和完整性。",
+        "status": "pending",
+        "summary": "",
+        "error": "",
+        "low_value": true
+      },
+      {
+        "step": 6,
+        "title": "步骤6：输出最终的中文化文关键信息列表。",
+        "status": "pending",
+        "summary": "",
+        "error": "",
+        "low_value": true
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "[\"步骤1：读取 docs/agent_intro.txt 文件，获取完整内容。\",\"步骤2：分析文件内容，识别关键信息点。\",\"步骤3：筛选并整理出三条最重要的关键信息。\",\"步骤4：将三条关键信息翻译成中文。\",\"步骤5：验证翻译的准确性和完整性。\",\"步骤6：输出最终的中文化文关键信息列表。\"]",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "execute",
+      "ai_message": {
+        "role": "assistant",
+        "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "tool_calls": []
+      },
+      "llm_status": "error",
+      "llm_error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: name"
+      },
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "步骤1：读取 docs/agent_intro.txt 文件，获取完整内容。",
+            "status": "pending",
+            "summary": "",
+            "error": ""
+          },
+          {
+            "step": 2,
+            "title": "步骤2：分析文件内容，识别关键信息点。",
+            "status": "pending",
+            "summary": "",
+            "error": ""
+          },
+          {
+            "step": 3,
+            "title": "步骤3：筛选并整理出三条最重要的关键信息。",
+            "status": "pending",
+            "summary": "",
+            "error": ""
+          },
+          {
+            "step": 4,
+            "title": "步骤4：将三条关键信息翻译成中文。",
+            "status": "pending",
+            "summary": "",
+            "error": ""
+          },
+          {
+            "step": 5,
+            "title": "步骤5：验证翻译的准确性和完整性。",
+            "status": "pending",
+            "summary": "",
+            "error": "",
+            "low_value": true
+          },
+          {
+            "step": 6,
+            "title": "步骤6：输出最终的中文化文关键信息列表。",
+            "status": "pending",
+            "summary": "",
+            "error": "",
+            "low_value": true
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": {
+    "type": "LLMParseError",
+    "message": "B4 failed to parse the model output as a valid AIMessage JSON object.",
+    "llm_call_index": 2,
+    "cause": {
+      "type": "ValueError",
+      "message": "tool call missing keys: name"
+    }
+  },
+  "adaptive": {
+    "strategy": "plan_execute",
+    "complexity": "high",
+    "confidence": 0.55,
+    "reason": "routing classifier did not return a valid AIMessage; fallback to heuristic. 启发式未能确认其为单步任务，保守回退到 plan_execute。",
+    "llm_status": "error",
+    "llm_error": {
+      "type": "ValueError",
+      "message": "tool_calls list must not be empty"
+    }
+  }
+}

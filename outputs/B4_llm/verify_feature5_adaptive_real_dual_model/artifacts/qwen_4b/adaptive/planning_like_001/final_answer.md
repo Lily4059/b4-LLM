@@ -1,0 +1,6 @@
+根据搜索结果，docs 目录中与 tool calling 最相关的文件是 docs/tool_calling.md（得分30.0）和 docs/search_skill_demo.md（得分5.0）。
+
+关键结论：
+1. **工具分层架构**：Tool Calling 模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。
+2. **工具编排流程**：模型先决定调用哪个工具，再由运行时执行工具并把 ToolMessage 返回给模型。
+3. **验证目的**：search_skill_demo.md 用于验证 local_file_search 工具的功能，强调工具编排中模型决策与执行分离的机制。

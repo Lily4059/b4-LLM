@@ -1,0 +1,25 @@
+{
+  "cases_path": "/root/siton-tmp/assignment_B/agent/data/messages/eval_cases_feature5_extended.json",
+  "profiles": [
+    "qwen_4b"
+  ],
+  "modes": [
+    "adaptive"
+  ],
+  "profile_targets": {
+    "qwen_4b": "/root/siton-tmp/assignment_B/Qwen3.5-4B"
+  },
+  "summary": {
+    "qwen_4b::adaptive": {
+      "cases": 22,
+      "success_rate": 0.8636,
+      "structured_output_rate": 0.9091,
+      "tool_match_rate": 0.9091,
+      "args_complete_rate": 1.0,
+      "avg_input_tokens": 7445.91,
+      "avg_output_tokens": 239.41,
+      "avg_elapsed_seconds": 23.1314
+    }
+  },
+  "evaluation_mode": "plan_execute"
+}

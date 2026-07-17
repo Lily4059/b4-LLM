@@ -1,0 +1,8 @@
+{
+  "strategy": "plan_execute",
+  "complexity": "high",
+  "confidence": 0.55,
+  "reason": "启发式未能确认其为单步任务，保守回退到 plan_execute。",
+  "llm_status": "success",
+  "llm_error": null
+}

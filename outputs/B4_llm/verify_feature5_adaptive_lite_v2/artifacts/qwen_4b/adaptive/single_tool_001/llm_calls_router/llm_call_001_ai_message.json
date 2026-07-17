@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"low\",\"confidence\":1.0,\"reason\":\"任务要求读取单个文件并提取要点，属于单步工具调用，无需多轮交互或状态推进。\"}",
+  "tool_calls": []
+}

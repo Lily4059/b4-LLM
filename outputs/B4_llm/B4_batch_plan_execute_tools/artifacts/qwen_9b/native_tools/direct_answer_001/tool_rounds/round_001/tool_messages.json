@@ -1,0 +1,9 @@
+[
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "calculator",
+    "content": "{\"skill_name\":\"calculator\",\"status\":\"error\",\"input\":{},\"output\":null,\"error\":{\"type\":\"ToolArgumentError\",\"code\":\"TOOL_ARGUMENT_ERROR\",\"category\":\"invalid_input\",\"message\":\"missing required parameters: expression\",\"retryable\":false,\"details\":{\"missing\":[\"expression\"]}},\"latency_ms\":0.037}",
+    "status": "error"
+  }
+]

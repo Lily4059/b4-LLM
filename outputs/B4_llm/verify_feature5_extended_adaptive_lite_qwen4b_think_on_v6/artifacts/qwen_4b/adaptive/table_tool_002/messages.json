@@ -1,0 +1,41 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: table_analyzer. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请分析 results.csv 的列结构和预览内容。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "table_analyzer",
+        "args": {
+          "path": "results.csv",
+          "max_rows_preview": 10,
+          "describe": true
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "table_analyzer",
+    "content": "{\"skill_name\": \"table_analyzer\", \"status\": \"success\", \"input\": {\"path\": \"tables/results.csv\", \"max_rows_preview\": 10, \"describe\": true}, \"output\": {\"path\": \"tables/results.csv\", \"num_rows\": 3, \"num_columns\": 3, \"columns\": [\"task\", \"score\", \"latency\"], \"preview\": [{\"task\": \"read_file\", \"score\": \"92\", \"latency\": \"15.2\"}, {\"task\": \"calculate\", \"score\": \"98\", \"latency\": \"3.1\"}, {\"task\": \"search\", \"score\": \"88\", \"latency\": \"20.5\"}], \"describe\": {\"score\": {\"count\": 3, \"min\": 88.0, \"max\": 98.0, \"mean\": 92.66666666666667}, \"latency\": {\"count\": 3, \"min\": 3.1, \"max\": 20.5, \"mean\": 12.933333333333332}}, \"original_preview_rows\": 3, \"compressed\": false}, \"error\": null, \"latency_ms\": 0.603}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "已获得本轮工具结果。请基于最新证据继续决策：如果信息已足够，就直接输出最终回答；如果仍缺关键证据，也可以继续请求下一轮工具。"
+  },
+  {
+    "role": "assistant",
+    "content": "根据工具返回的结果，results.csv 的列结构和预览内容如下：\n\n**列结构：**\n- 共 3 列：`task`、`score`、`latency`\n\n**预览内容（3行数据）：**\n| task | score | latency |\n|------|-------|---------|\n| read_file | 92 | 15.2 |\n| calculate | 98 | 3.1 |\n| search | 88 | 20.5 |\n\n**统计信息：**\n- **score 列**：最小值 88.0，最大值 98.0，平均值 92.67\n- **latency 列**：最小值 3.1，最大值 20.5，平均值 12.93",
+    "tool_calls": []
+  }
+]

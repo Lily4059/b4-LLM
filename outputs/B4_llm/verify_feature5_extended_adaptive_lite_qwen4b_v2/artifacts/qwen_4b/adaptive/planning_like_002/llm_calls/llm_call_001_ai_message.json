@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "[\"步骤1: 搜索 docs 目录中与 Memory 相关的文件\",\"步骤2: 读取最相关的文件内容\",\"步骤3: 分析文件内容并总结与 Memory 相关的信息\"]",
+  "tool_calls": []
+}

@@ -1,0 +1,39 @@
+[
+  {
+    "role": "system",
+    "content": "You are a local tool-using agent. When the user asks about local files, local search, table contents, or arithmetic, you must use the available tools instead of prior knowledge. For this evaluation case, the expected tool(s) are: calculator. If multiple independent tools are needed, request them in the same response."
+  },
+  {
+    "role": "user",
+    "content": "请计算 23*17+9，如果需要工具请调用合适的计算工具。"
+  },
+  {
+    "role": "assistant",
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "calculator",
+        "args": {
+          "expression": "23*17+9"
+        }
+      }
+    ]
+  },
+  {
+    "role": "tool",
+    "tool_call_id": "call_001",
+    "name": "calculator",
+    "content": "{\"skill_name\": \"calculator\", \"status\": \"success\", \"input\": {\"expression\": \"23*17+9\"}, \"output\": {\"result\": 400}, \"error\": null, \"latency_ms\": 0.716}",
+    "status": "success"
+  },
+  {
+    "role": "user",
+    "content": "已获得本轮工具结果。现在必须直接给出最终回答（schema A），tool_calls 必须为 []。不要再请求任何工具。"
+  },
+  {
+    "role": "assistant",
+    "content": "23*17+9 = 400",
+    "tool_calls": []
+  }
+]

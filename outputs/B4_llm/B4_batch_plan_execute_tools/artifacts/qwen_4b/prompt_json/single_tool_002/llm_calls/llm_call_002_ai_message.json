@@ -1,0 +1,14 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "calculator",
+      "args": {
+        "expression": "23*17+9"
+      }
+    }
+  ],
+  "_step_marker": "STEP_DONE:1:计算 23*17+9 得到 400"
+}

@@ -1,0 +1,50 @@
+{
+  "1bc42bd0f4fc2b1deaa2c50ade15df8ad65a983b517c73984e0c21b214dca7c6": {
+    "name": "file_reader",
+    "args": {
+      "path": "docs/agent_intro.txt",
+      "max_chars": 1200
+    },
+    "created_at": "2026-07-08T20:30:46+08:00",
+    "skill_result": {
+      "skill_name": "file_reader",
+      "status": "success",
+      "input": {
+        "path": "docs/agent_intro.txt",
+        "max_chars": 1200
+      },
+      "output": {
+        "content": "Agent 系统通常由模型、工具、记忆和执行循环组成。\n工具调用让模型能够读取本地文件、执行计算，并把结果用于后续回答。\nMemory 为 Agent 提供全局知识和历史对话上下文。\n",
+        "num_chars": 92,
+        "source": "docs/agent_intro.txt",
+        "truncated": false
+      },
+      "error": null,
+      "latency_ms": 0.49
+    }
+  },
+  "db216e1bafa80e4b19dc530940bf01f332787b716a5e620577704a149f4d1ddf": {
+    "name": "file_reader",
+    "args": {
+      "path": "docs/tool_calling.md",
+      "max_chars": 1200
+    },
+    "created_at": "2026-07-08T20:30:46+08:00",
+    "skill_result": {
+      "skill_name": "file_reader",
+      "status": "success",
+      "input": {
+        "path": "docs/tool_calling.md",
+        "max_chars": 1200
+      },
+      "output": {
+        "content": "# Tool Calling\n\n模型负责决定是否调用工具，工具层负责校验和执行，运行时负责维护消息闭环。\n",
+        "num_chars": 53,
+        "source": "docs/tool_calling.md",
+        "truncated": false
+      },
+      "error": null,
+      "latency_ms": 0.253
+    }
+  }
+}

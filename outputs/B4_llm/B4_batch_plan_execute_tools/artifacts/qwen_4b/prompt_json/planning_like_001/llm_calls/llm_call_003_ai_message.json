@@ -1,0 +1,15 @@
+{
+  "role": "assistant",
+  "content": "",
+  "tool_calls": [
+    {
+      "id": "call_001",
+      "name": "file_reader",
+      "args": {
+        "path": "docs/tool_calling.md",
+        "max_chars": 2000
+      }
+    }
+  ],
+  "_step_marker": "STEP_DONE:1: 搜索完成，找到 docs/tool_calling.md 和 docs/search_skill_demo.md 两个相关文件，其中 tool_calling.md 相关性最高（得分30.0）。下一步将读取该文件内容以总结关键结论。"
+}

@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "{\"complexity\":\"low\",\"confidence\":0.9,\"reason\":\"计算简单，直接使用计算器即可得出结果。\"}",
+  "tool_calls": []
+}

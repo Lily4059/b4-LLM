@@ -1,0 +1,8 @@
+{
+  "strategy": "plan_execute",
+  "complexity": "high",
+  "confidence": 0.7,
+  "reason": "任务包含检索、比较或明显的多步依赖。",
+  "llm_status": "success",
+  "llm_error": null
+}

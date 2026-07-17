@@ -1,0 +1,44 @@
+{
+  "mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "qwen_9b",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+  "raw_text": "{\"content\":\"23*17+9 的计算结果为 400。\",\"tool_calls\":[]}\n",
+  "parsed_candidate": {
+    "content": "23*17+9 的计算结果为 400。",
+    "tool_calls": []
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\"content\":\"23*17+9 的计算结果为 400。\"},\"tool_calls\":[]}\n",
+      "usage": {
+        "input_tokens": 2157,
+        "output_tokens": 27,
+        "elapsed_seconds": 4.1628
+      },
+      "error": {
+        "type": "ValueError",
+        "message": "tool_calls list must not be empty"
+      }
+    },
+    {
+      "attempt_index": 2,
+      "raw_text": "{\"content\":\"23*17+9 的计算结果为 400。\",\"tool_calls\":[]}\n",
+      "usage": {
+        "input_tokens": 2291,
+        "output_tokens": 26,
+        "elapsed_seconds": 4.132
+      }
+    }
+  ],
+  "repair_attempted": true,
+  "generated_at": "2026-07-07T11:26:10+08:00",
+  "usage": {
+    "input_tokens": 4448,
+    "output_tokens": 53,
+    "elapsed_seconds": 8.2948
+  }
+}

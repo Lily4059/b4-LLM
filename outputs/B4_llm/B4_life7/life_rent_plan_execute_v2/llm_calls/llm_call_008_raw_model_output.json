@@ -1,0 +1,40 @@
+{
+  "mode": "prompt_json",
+  "backend": "transformers",
+  "model_profile": "planner",
+  "resolved_model_path": "/root/siton-tmp/assignment_B/Qwen3.5-4B",
+  "raw_text": "{\n  \"tool_calls\": [\n    {\n      \"name\": \"table_analyzer\",\n      \"arguments\": {\n        \"path\": \"tables/life_rent_budget.csv\",\n        \"max_chars\": 2000\n      }\n    }\n  ]\n}\n",
+  "parsed_candidate": {
+    "content": "",
+    "tool_calls": [
+      {
+        "id": "call_001",
+        "name": "table_analyzer",
+        "args": {
+          "path": "tables/life_rent_budget.csv",
+          "max_chars": 2000
+        }
+      }
+    ]
+  },
+  "status": "success",
+  "error": null,
+  "attempts": [
+    {
+      "attempt_index": 1,
+      "raw_text": "{\n  \"tool_calls\": [\n    {\n      \"name\": \"table_analyzer\",\n      \"arguments\": {\n        \"path\": \"tables/life_rent_budget.csv\",\n        \"max_chars\": 2000\n      }\n    }\n  ]\n}\n",
+      "usage": {
+        "input_tokens": 4096,
+        "output_tokens": 65,
+        "elapsed_seconds": 6.1057
+      }
+    }
+  ],
+  "repair_attempted": false,
+  "generated_at": "2026-07-06T23:22:14+08:00",
+  "usage": {
+    "input_tokens": 4096,
+    "output_tokens": 65,
+    "elapsed_seconds": 6.1057
+  }
+}

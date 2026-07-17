@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 1.0,
+  "reason": "该任务仅要求用一句话解释概念，无需调用任何工具，属于单步低复杂度任务。",
+  "llm_status": "success",
+  "llm_error": null
+}

@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 1.0,
+  "reason": "This is a knowledge-based question that can be answered directly without any tool calls.",
+  "llm_status": "success",
+  "llm_error": null
+}

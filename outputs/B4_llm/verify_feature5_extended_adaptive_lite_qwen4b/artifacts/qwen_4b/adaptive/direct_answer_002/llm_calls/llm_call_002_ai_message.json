@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "ReAct 在每一步推理后都会执行工具以获取信息，而 Plan-and-Execute 先完整规划所有步骤再执行。ReAct 更灵活但可能重复调用工具，Plan-and-Execute 更高效但缺乏动态调整能力。ReAct 适合探索性任务，Plan-and-Execute 适合确定性任务。",
+  "tool_calls": []
+}

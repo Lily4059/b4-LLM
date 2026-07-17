@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "ReAct 采用“思考 - 行动 - 观察”的循环，在每一步行动后根据环境反馈动态调整后续计划；而 Plan-and-Execute 先完整生成整个执行计划，再按顺序执行，不依赖中间反馈进行实时修正。ReAct 更灵活但可能产生冗余思考，Plan-and-Execute 更结构化但缺乏对执行结果的即时适应能力。",
+  "tool_calls": []
+}

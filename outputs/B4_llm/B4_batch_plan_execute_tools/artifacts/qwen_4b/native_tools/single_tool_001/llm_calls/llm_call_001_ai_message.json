@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "```json\n{\n  \"plan\": [\n    \"读取 docs/agent_intro.txt 文件内容\",\n    \"分析文件内容，提取关键信息\",\n    \"整理并总结三条中文要点\"\n  ]\n}\n```",
+  "tool_calls": []
+}

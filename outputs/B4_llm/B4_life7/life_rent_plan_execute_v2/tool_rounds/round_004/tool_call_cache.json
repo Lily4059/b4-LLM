@@ -1,0 +1,69 @@
+{
+  "399112a01056411479dfb331cd7b6a49b929dd5dff50f1a3a6b7141b43350717": {
+    "name": "table_analyzer",
+    "args": {
+      "path": "tables/life_rent_budget.csv"
+    },
+    "created_at": "2026-07-06T23:22:30+08:00",
+    "skill_result": {
+      "skill_name": "table_analyzer",
+      "status": "success",
+      "input": {
+        "path": "tables/life_rent_budget.csv"
+      },
+      "output": {
+        "path": "tables/life_rent_budget.csv",
+        "num_rows": 10,
+        "num_columns": 4,
+        "columns": [
+          "item",
+          "category",
+          "monthly_cost",
+          "note"
+        ],
+        "preview": [
+          {
+            "item": "房租",
+            "category": "住房",
+            "monthly_cost": "4500",
+            "note": "目标房源C的租金（若选择A则4200，B则4900）"
+          },
+          {
+            "item": "水电燃气",
+            "category": "住房",
+            "monthly_cost": "320",
+            "note": "夏季可能更高"
+          },
+          {
+            "item": "宽带",
+            "category": "住房",
+            "monthly_cost": "80",
+            "note": "100M"
+          },
+          {
+            "item": "交通",
+            "category": "通勤",
+            "monthly_cost": "260",
+            "note": "地铁+偶尔打车"
+          },
+          {
+            "item": "餐饮",
+            "category": "生活",
+            "monthly_cost": "1400",
+            "note": "工作日外卖+周末做饭"
+          }
+        ],
+        "describe": {
+          "monthly_cost": {
+            "count": 10,
+            "min": 80.0,
+            "max": 4500.0,
+            "mean": 883.9
+          }
+        }
+      },
+      "error": null,
+      "latency_ms": 1.027
+    }
+  }
+}

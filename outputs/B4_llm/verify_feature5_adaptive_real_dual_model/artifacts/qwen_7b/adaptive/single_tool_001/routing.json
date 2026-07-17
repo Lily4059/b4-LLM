@@ -1,0 +1,8 @@
+{
+  "strategy": "react_one_round",
+  "complexity": "low",
+  "confidence": 0.9,
+  "reason": "任务简单，直接读取文件并提取要点即可完成。",
+  "llm_status": "success",
+  "llm_error": null
+}

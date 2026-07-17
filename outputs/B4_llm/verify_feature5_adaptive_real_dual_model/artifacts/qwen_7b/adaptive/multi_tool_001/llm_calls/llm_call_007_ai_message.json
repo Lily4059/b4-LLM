@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "agent_intro.txt关注点包括模型、工具、记忆和执行循环。tool_calling.md关注点包括模型决定是否调用工具、工具层校验和执行以及运行时维护消息闭环。",
+  "tool_calls": []
+}

@@ -1,0 +1,8 @@
+{
+  "strategy": "plan_execute",
+  "complexity": "high",
+  "confidence": 0.0,
+  "reason": "",
+  "llm_status": "success",
+  "llm_error": null
+}

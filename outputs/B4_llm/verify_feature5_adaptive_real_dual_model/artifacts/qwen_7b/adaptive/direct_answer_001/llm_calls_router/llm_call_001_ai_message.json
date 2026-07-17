@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "tool calling是指在执行任务时调用预设工具的过程。",
+  "tool_calls": []
+}

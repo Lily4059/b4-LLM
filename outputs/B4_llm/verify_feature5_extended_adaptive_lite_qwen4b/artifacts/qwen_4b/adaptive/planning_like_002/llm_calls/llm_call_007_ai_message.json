@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "根据 docs/agent_intro.txt 文件内容，与 Memory 相关的信息总结如下：\n\n1. **Agent 系统组成**：Agent 系统通常由模型、工具、记忆（Memory）和执行循环四部分组成。\n\n2. **Memory 的核心作用**：Memory 为 Agent 提供全局知识和历史对话上下文，使系统能够保持连续性和上下文理解能力。\n\n3. **工具与 Memory 的协同**：工具调用让模型能够读取本地文件、执行计算，并把结果用于后续回答，这些操作的结果会被 Memory 记录并用于后续的对话中。\n\n简而言之，Memory 是 Agent 系统的核心组件之一，负责存储和提供全局知识及历史对话上下文，确保 Agent 能够理解并延续之前的对话内容。",
+  "tool_calls": []
+}

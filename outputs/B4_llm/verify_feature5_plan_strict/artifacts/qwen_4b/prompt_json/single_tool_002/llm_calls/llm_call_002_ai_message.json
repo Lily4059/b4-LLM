@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "23*17+9 = 391+9 = 400",
+  "tool_calls": []
+}

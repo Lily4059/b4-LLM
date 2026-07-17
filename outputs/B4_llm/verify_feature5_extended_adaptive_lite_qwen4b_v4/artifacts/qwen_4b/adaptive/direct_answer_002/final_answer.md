@@ -1,0 +1,1 @@
+ReAct 是边推理边行动的模式，每一步先思考再调用工具；Plan-and-Execute 是先整体规划再统一执行，适合多步骤任务。Plan-and-Execute 通过预定义步骤和状态管理，能更好地保持计划同步和输出格式正确。ReAct 更灵活但可能中断执行，而 Plan-and-Execute 更结构化但灵活性较低。

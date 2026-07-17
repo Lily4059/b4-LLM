@@ -1,0 +1,5 @@
+{
+  "role": "assistant",
+  "content": "Tool calling 是指程序在运行过程中，根据需求动态调用外部工具或函数来完成任务的能力。",
+  "tool_calls": []
+}

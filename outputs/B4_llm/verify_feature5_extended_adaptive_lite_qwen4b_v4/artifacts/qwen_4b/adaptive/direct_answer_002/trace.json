@@ -1,0 +1,69 @@
+{
+  "status": "success",
+  "tool_rounds_used": 0,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "请用三句话说明 ReAct 和 Plan-and-Execute 的区别。",
+        "status": "completed",
+        "summary": "Fast Path：单步任务且不需要外部工具证据，直接完成。",
+        "error": ""
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "tool_calls": []
+      },
+      "llm_status": "error",
+      "llm_error": {
+        "type": "ValueError",
+        "message": "tool_calls list must not be empty"
+      },
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "finish",
+      "ai_message": {
+        "role": "assistant",
+        "content": "ReAct 是边推理边行动的模式，每一步先思考再调用工具；Plan-and-Execute 是先整体规划再统一执行，适合多步骤任务。Plan-and-Execute 通过预定义步骤和状态管理，能更好地保持计划同步和输出格式正确。ReAct 更灵活但可能中断执行，而 Plan-and-Execute 更结构化但灵活性较低。",
+        "tool_calls": []
+      },
+      "llm_status": "success",
+      "llm_error": null,
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请用三句话说明 ReAct 和 Plan-and-Execute 的区别。",
+            "status": "completed",
+            "summary": "Fast Path：单步任务且不需要外部工具证据，直接完成。",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": null,
+  "adaptive": {
+    "strategy": "plan_execute",
+    "complexity": "high",
+    "confidence": 0.55,
+    "reason": "启发式未能确认其为单步任务，保守回退到 plan_execute。",
+    "llm_status": "success",
+    "llm_error": null
+  }
+}

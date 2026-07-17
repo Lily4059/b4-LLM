@@ -1,0 +1,83 @@
+{
+  "status": "llm_parse_error",
+  "tool_rounds_used": 0,
+  "llm_call_count": 2,
+  "plan_state": {
+    "mode": "plan_execute",
+    "steps": [
+      {
+        "step": 1,
+        "title": "请并行读取 docs/agent_intro.txt 与 docs/tool_calling.md，各用一句话概括它们分别关注什么。",
+        "status": "pending",
+        "summary": "",
+        "error": ""
+      }
+    ],
+    "evidence_policy": "lite"
+  },
+  "turns": [
+    {
+      "turn_index": 1,
+      "phase": "plan",
+      "ai_message": {
+        "role": "assistant",
+        "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "tool_calls": []
+      },
+      "llm_status": "error",
+      "llm_error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: name"
+      },
+      "tool_messages": []
+    },
+    {
+      "turn_index": 2,
+      "phase": "execute",
+      "ai_message": {
+        "role": "assistant",
+        "content": "模型输出解析失败，无法生成有效工具调用或最终回答。",
+        "tool_calls": []
+      },
+      "llm_status": "error",
+      "llm_error": {
+        "type": "ValueError",
+        "message": "tool call missing keys: name"
+      },
+      "tool_messages": [],
+      "plan_state": {
+        "mode": "plan_execute",
+        "steps": [
+          {
+            "step": 1,
+            "title": "请并行读取 docs/agent_intro.txt 与 docs/tool_calling.md，各用一句话概括它们分别关注什么。",
+            "status": "pending",
+            "summary": "",
+            "error": ""
+          }
+        ],
+        "evidence_policy": "lite"
+      }
+    }
+  ],
+  "error": {
+    "type": "LLMParseError",
+    "message": "B4 failed to parse the model output as a valid AIMessage JSON object.",
+    "llm_call_index": 2,
+    "cause": {
+      "type": "ValueError",
+      "message": "tool call missing keys: name"
+    }
+  },
+  "adaptive": {
+    "strategy": "plan_execute",
+    "complexity": "high",
+    "confidence": 0.7,
+    "reason": "routing classifier did not return a valid AIMessage; fallback to heuristic. 任务包含检索、比较或明显的多步依赖。",
+    "llm_status": "error",
+    "llm_error": {
+      "type": "ValueError",
+      "message": "tool_calls list must not be empty"
+    }
+  }
+}
