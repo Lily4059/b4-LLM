@@ -147,11 +147,11 @@ pip install -r requirements.txt
 agent/
 ├── code/
 │   ├── b4_local_agent_llm.py          # B4 核心模块：模型加载、推理、双模式工具调用、Plan-and-Execute、自适应路由、扩展增强（约 2800 行）
-│   ├── b1_agent_runtime_1.py           # B1 Agent 运行时（B4 的 Plan-and-Execute 委托调用此模块）
+│   ├── b1_agent_runtime_1.py          # B1 Agent 运行时（B4 的 Plan-and-Execute 委托调用此模块）
 │   └── common/
 │       ├── schemas.py                 # AIMessage 标准数据结构与校验
-│       ├── io_utils.py                 # JSON/YAML 读写工具
-│       └── path_utils.py               # 路径解析工具
+│       ├── io_utils.py                # JSON/YAML 读写工具
+│       └── path_utils.py              # 路径解析工具
 ├── configs/
 │   ├── model.yaml                     # 模型配置：后端、路径、模型池（default/planner/qwen_4b/qwen_7b）、路由策略、生成参数
 │   └── model_new.yaml                 # 模块演示用模型配置
@@ -161,36 +161,48 @@ agent/
 │       ├── messages_with_tool.json    # 演示2输入：生成最终回答
 │       ├── messages_with_error_tool.json  # 演示3输入：工具失败后回答
 │       ├── messages_with_multi_tool_batch_test.json  # 多工具往返输入
-│       ├── messages_module_demo_plan_execute.json  # Plan-and-Execute 输入
+│       ├── messages_life_rent_plan_execute.json  # Plan-and-Execute 输入
 │       ├── tools_schema_basic.json    # 预设工具说明
 │       ├── eval_cases_feature5.json   # 6条评测用例
 │       └── eval_cases_feature5_extended.json  # 22条扩展评测用例
 ├── outputs/
-│   ├── B4_llm/                        # B4 命令行运行产物目录
-│   ├── B4_compat/                     # 批量对比评测结果
+│   ├── B4_llm/                        # B4 命令行运行产物目录（当前仓库已上传完整评测与 artifacts）
+│   ├── B4_compat/
+│   │   └── test_b4_compat_batch_eval/ # 双模式兼容性/对比评测结果
 │   ├── B3/compare_tools_injection/    # 注入方式对比结果
 │   └── full_demo/                     # 完整系统演示产物
 │       ├── demo_report.md
 │       └── llm_calls/                 # 每次 LLM 调用的 raw_model_output + ai_message
 ├── ai_web/                            # Agent Studio Web 前端（本人负责）
-│   ├── server_2.py                      # 统一 Web 服务端（ThreadingHTTPServer，六页面 API；UI 人性化展示：工具调用自然语言描述、协议消息过滤、相邻消息去重合并；模型预热：异步加载 + JOB_REGISTRY 任务注册；B4 评测目录映射：B4_FIXED_EVAL_DIRS）
+│   ├── server.py                      # Web 服务端基础版本
+│   ├── server_1.py                    # 中间迭代版本
+│   ├── server_2.py                    # 当前展示版统一 Web 服务端（六页面 API、模型预热、B4 评测目录映射）
 │   ├── static/
-│   │   ├── index_2.html                 # 前端页面（侧边栏导航 + 六页面切换 + 实时进度轮询）
-│   │   ├── app_2.js                     # 前端交互逻辑（状态管理、API 调用、消息渲染、执行步骤展示）
-│   │   └── app_1.js                   # 增强版前端（集成 B1+B4 的完整 Agent 对话）
-│   └── README.md
+│   │   ├── index.html                 # 页面基础版本
+│   │   ├── index_1.html               # 中间迭代版本
+│   │   ├── index_2.html               # 当前展示版页面（侧边栏导航 + 六页面切换 + 实时进度轮询）
+│   │   ├── app.js                     # 前端交互逻辑基础版本
+│   │   ├── app_1.js                   # 增强版前端（集成 B1+B4 的完整 Agent 对话）
+│   │   └── app_2.js                   # 当前展示版前端逻辑（状态管理、API 调用、消息渲染、执行步骤展示）
+│   ├── README.md
+│   └── README_1.md
 ├── module_demos/                      # Module Studio 模块演示系统（本人负责）
-│   ├── demo_server.py                # 演示服务端（B1-B5 统一路由；B4 支持 6 大模式）
+│   ├── demo_server.py                 # 演示服务端（B1-B5 统一路由；B4 支持 6 大模式）
 │   ├── run_all_demo.py                # 统一启动入口
+│   ├── run_b1_demo.py                 # B1 单模块演示脚本
+│   ├── run_b2_demo.py                 # B2 单模块演示脚本
+│   ├── run_b3_demo.py                 # B3 单模块演示脚本
+│   ├── run_b4_demo.py                 # B4 单模块演示脚本
+│   ├── run_b5_demo.py                 # B5 单模块演示脚本
 │   ├── outputs/
-│   │   └── b4/                        # B4 模块演示与评测产物（演示输出 + 批量评测结果 + 注入对比结果 + 模型路由可视化）
+│   │   └── b4/                        # B4 模块演示与评测产物（多轮输出、批量评测、路由与工具轮次记录）
 │   ├── static/
 │   │   ├── index.html                 # 模块演示页面（左侧模块导航 + 右侧输入输出面板）
 │   │   ├── app.js                     # 演示交互逻辑（6 大 B4 模式切换 + 参数输入 + 结果展示 + 在线人数感知）
 │   │   ├── style.css                  # 演示页面样式
 │   │   └── metrics.css                # 评测指标展示样式
 │   └── README.md
-├── run_full_demo.py                   # 完整系统一键演示入口
+├── 图片/                              # README/汇报使用的功能截图（基础功能、多工具、Plan-and-Execute、批量评估、模型切换）
 ├── PERSONAL_README_B4.md              # 个人模块说明文档
 └── b4-feature-guide.html              # B4 功能详解文档（含全部函数索引和行号）
 ```
